@@ -1,0 +1,44 @@
+/// Output directional properties, for instance `margin`.
+///
+/// @access private
+///
+/// @param {String} $pre
+///   Prefix to use
+/// @param {String} $suf
+///   Suffix to use
+/// @param {List} $vals
+///   List of values
+
+directional-property( $pre, $suf, $vals )
+    if last( $vals ) == "!important"
+        _void = pop( $vals )    // remove !important from vals
+        $important = "!important"
+    else
+        $important = ""
+    // Property Names
+    $top    =  $pre + "-top"    + ($suf ? "-" + $suf : "")
+    $right  =  $pre + "-right"  + ($suf ? "-" + $suf : "")
+    $bottom =  $pre + "-bottom" + ($suf ? "-" + $suf : "")
+    $left   =  $pre + "-left"   + ($suf ? "-" + $suf : "")
+    $all    =  $pre + ""        + ($suf ? "-" + $suf : "")
+
+    if length( $vals ) == 1 && $vals[0] != null
+        {$all}    $vals[0] unquote( $important )
+
+    if length( $vals ) == 2
+        {$top}    $vals[0] unquote( $important ) if $vals[0] != null
+        {$right}  $vals[1] unquote( $important ) if $vals[1] != null
+        {$bottom} $vals[0] unquote( $important ) if $vals[0] != null
+        {$left}   $vals[1] unquote( $important ) if $vals[1] != null
+
+    if length( $vals ) == 3
+        {$top}    $vals[0] unquote( $important ) if $vals[0] != null
+        {$right}  $vals[1] unquote( $important ) if $vals[1] != null
+        {$bottom} $vals[2] unquote( $important ) if $vals[2] != null
+        {$left}   $vals[1] unquote( $important ) if $vals[1] != null
+
+    if length( $vals ) == 4
+        {$top}    $vals[0] unquote( $important ) if $vals[0] != null
+        {$right}  $vals[1] unquote( $important ) if $vals[1] != null
+        {$bottom} $vals[2] unquote( $important ) if $vals[2] != null
+        {$left}   $vals[3] unquote( $important ) if $vals[3] != null

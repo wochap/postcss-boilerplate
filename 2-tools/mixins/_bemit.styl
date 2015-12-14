@@ -1,0 +1,54 @@
+//  Component
+//  --------------------------------------------------------------------------
+component($name)
+	{"." + $prefix-component + $name}
+		{block}
+c = component
+
+
+//  Object
+//  --------------------------------------------------------------------------
+object($name)
+	{"." + $prefix-object + $name}
+		{block}
+o = object
+
+
+//  Utility
+//  --------------------------------------------------------------------------
+utility($name)
+	{"." + $prefix-utility + $name}
+		{block}
+u = utility
+
+
+//  Scope
+//  --------------------------------------------------------------------------
+scope($name)
+	{"." + $prefix-scope + $name}
+		{block}
+s = scope
+
+
+//  Element
+//  --------------------------------------------------------------------------
+element($name)
+	&{$prefix-element + $name}
+		{block}
+e = element
+
+
+//  Modifier
+//  --------------------------------------------------------------------------
+modifier($name)
+	&{$prefix-modifier + $name}
+		{block}
+m = modifier
+
+
+//  State
+//  --------------------------------------------------------------------------
+when($name)
+	&{$prefix-state + $name}
+		{block}
+w = when
