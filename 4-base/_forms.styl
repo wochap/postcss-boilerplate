@@ -1,0 +1,62 @@
+legend,
+fieldset
+    margin(0)
+    padding(0)
+    background-color: $transparent
+    border: 0
+    font-family: inherit
+    font-style: inherit
+    font-weight: inherit
+
+input,
+label,
+select
+    display: block
+
+label
+    fw('s-bold')
+    margin-bottom: space('1', em)
+
+{$all-text-inputs},
+select[multiple=multiple]
+    margin(0)
+    padding(space('2', em))
+    background-color: $base-background-color
+    border-radius: $base-border-radius
+    border: $base-border
+    box-shadow: $form-box-shadow
+    transition: border-color $base-duration $base-timing
+    width: 100%
+
+    &:hover
+        border-color: shade($base-border-color, 20%)
+
+    &:focus
+        border-color: $c-info
+        box-shadow: $form-box-shadow-focus
+        outline: none
+
+    &:disabled
+        border-color(shade($base-background-color, 15%))
+        background-color: shade($base-background-color, 10%)
+        cursor: not-allowed
+
+textarea
+    resize: vertical
+
+input[type="search"]
+    appearance: none
+
+input[type="checkbox"],
+input[type="radio"]
+    display: inline
+    margin-right: space('1', em)
+    + label
+        display: inline-block
+
+input[type="file"]
+    width: 100%
+
+select
+    max-width: 100%
+    width: auto
