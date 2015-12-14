@@ -2,30 +2,27 @@
 //  ==========================================================================
 
 
-//	Spaces
+//  Forms
 //  --------------------------------------------------------------------------
-$space-1 = .25rem
-$space-2 = -5rem
-$space-3 = 1rem
-$space-4 = 2rem
-$space-5 = 4rem
+$form-box-shadow       = none
+$form-box-shadow-focus = none
 
 
 //  Typography
 //  --------------------------------------------------------------------------
 $base-font-family = 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+$base-font-size   = 16px
 $base-font-weight = $font-weight-normal
-$base-line-height = 1.25
+$base-line-height = 1.6em
 
 $heading-font-family   = 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 $heading-font-weight   = $font-weight-bold
-$heading-line-height   = 1.25
-$heading-margin-bottom = 1em
+$heading-line-height   = 1.6em
 
 $icon-font-family = 'icomoon'
 
 $paragraph-margin-top    = 0
-$paragraph-margin-bottom = 1em
+$paragraph-margin-bottom = 0.8em
 
 
 //  Colours
@@ -34,14 +31,20 @@ $color-primary   = #7809BA // colour of text and main colour overall
 $color-secondary = #D4007C // colour of any components, backgrounds, etc.
 $color-tertiary  = #3A14BE // special colour to complement secondary colour
 
-$base-color        = #878787
-$base-border-color = $light-gray
-$base-background   = $white
+$base-font-color       = #878787
+$base-border-color     = #a6a6a6
+$base-background-color = $white
 
 $heading-color = #383838
 
 $link-color       = #047ac6
-$link-color-hover = #2596de
+$link-color-hover = lightness(#047ac6, 50%)
+
+
+//  Border
+//  --------------------------------------------------------------------------
+$base-border-radius = 3px
+$base-border        = 2px solid $base-border-color
 
 
 //  Wrapper
@@ -54,7 +57,7 @@ $wrapper-width-md = 780px
 
 //  Animations
 //  --------------------------------------------------------------------------
-$base-duration = 300ms
+$base-duration = 0.3s
 $base-timing   = ease
 
 
