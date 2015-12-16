@@ -1,22 +1,3 @@
-legend,
-fieldset
-    margin(0)
-    padding(0)
-    background-color: $transparent
-    border: 0
-    font-family: inherit
-    font-style: inherit
-    font-weight: inherit
-
-input,
-label,
-select
-    display: block
-
-label
-    fw('s-bold')
-    margin-bottom: space('1', em)
-
 {$all-text-inputs},
 select[multiple=multiple]
     margin(0)
@@ -41,22 +22,39 @@ select[multiple=multiple]
         background-color: shade($base-background-color, 10%)
         cursor: not-allowed
 
+fieldset,
+legend
+    margin(0)
+    padding(0)
+    border: 0
+
+input,
+label,
 textarea
-    resize: vertical
+    display: block
 
 input[type="search"]
     appearance: none
 
 input[type="checkbox"],
 input[type="radio"]
-    display: inline
+    display: inline-block
     margin-right: space('1', em)
-    + label
-        display: inline-block
 
 input[type="file"]
     width: 100%
 
+label
+    fw('s-bold')
+    margin-bottom: 0.8em;
+
+legend
+    fw('s-bold')
+
 select
+    display: inline-block
     max-width: 100%
     width: auto
+
+textarea
+    resize: vertical
