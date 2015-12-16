@@ -24,7 +24,9 @@ h5 { font-size: $font-size-h5 }
 h6 { font-size: $font-size-h6 }
 
 p
-    margin($paragraph-margin-top 0 $paragraph-margin-bottom)
+    margin($paragraph-margin-top 0 $paragraph-margin-top)
+    & + p 
+        margin($paragraph-margin-bottom 0 $paragraph-margin-top)
 
 a
     color: $link-color
