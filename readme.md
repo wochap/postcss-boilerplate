@@ -1,5 +1,12 @@
 ## Postcss boilerplate
->v.0.0.3
+>v.0.0.4
+
+### Plugins
+
+* [Axis](http://axis.netlify.com/)
+* [Kouto Swiss](http://kouto-swiss.io/)
+* [Lost Grid](http://corysimmons.github.io/lost/)
+* [Basscss](http://www.basscss.com/docs/)
 
 ### Goals
 
@@ -10,10 +17,6 @@ ITCSS is a sane, scalable, managed architecture for CSS.
 * Naming convention: [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
 BEMIT is an approach to front-end development designed with flexibility and ease of modification in mind.
-
-### Plugins
-* [Lost Grid](http://corysimmons.github.io/lost/)
-* []()
 
 ### Directory structure
 
