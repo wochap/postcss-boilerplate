@@ -1,5 +1,5 @@
 /*
- * Postcss boilerplate - v0.0.1
+ * Postcss boilerplate - v0.0.4
  * A boilerplate for Postcss projects
  * https://github.com/wochap/postcss-boilerplate
  *
@@ -308,16 +308,16 @@ th {
   border-radius: 50%;
 }
 .rounded-top {
-  border-radius: $border-radius $border-radius 0 0;
+  border-radius: 3px 3px 0 0;
 }
 .rounded-right {
-  border-radius: 0 $border-radius $border-radius 0;
+  border-radius: 0 3px 3px 0;
 }
 .rounded-bottom {
-  border-radius: 0 0 $border-radius $border-radius;
+  border-radius: 0 0 3px 3px;
 }
 .rounded-left {
-  border-radius: $border-radius 0 0 $border-radius;
+  border-radius: 3px 0 0 3px;
 }
 .not-rounded {
   border-radius: 0;
@@ -762,6 +762,10 @@ th {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+input[type="submit"],
+button {
+  display: inline-block;
+}
 input[type="submit"]:disabled,
 button:disabled {
   cursor: not-allowed;
@@ -811,25 +815,6 @@ iframe {
 }
 .browsehappy a:hover {
   text-decoration: none;
-}
-legend,
-fieldset {
-  margin: 0;
-  padding: 0;
-  background-color: rgba(0,0,0,0);
-  border: 0;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-}
-input,
-label,
-select {
-  display: block;
-}
-label {
-  font-weight: 600;
-  margin-bottom: 0.25em;
 }
 input[type="color"],
 input[type="date"],
@@ -914,46 +899,53 @@ textarea:disabled {
   background-color: #e8e8e8;
   cursor: not-allowed;
 }
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+input,
+label,
 textarea {
-  resize: vertical;
+  display: block;
 }
 input[type="search"] {
   appearance: none;
+  box-sizing: border-box;
 }
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
-  margin-right: 0.25em;
-}
-input[type="checkbox"] + label,
-input[type="radio"] + label {
   display: inline-block;
+  margin-right: 0.25em;
 }
 input[type="file"] {
   width: 100%;
 }
+label {
+  font-weight: 600;
+}
+legend {
+  font-weight: 600;
+}
 select {
+  display: inline-block;
   max-width: 100%;
   width: auto;
 }
+textarea {
+  resize: vertical;
+}
 ul,
-ol {
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 0;
-  list-style-type: none;
-  padding-left: 0;
 }
 dl dt {
   font-weight: 600;
 }
-dl dd {
-  margin: 0;
-}
 table {
-  margin-top: 1rem;
-  margin-right: 0;
-  margin-bottom: 1rem;
-  margin-left: 0;
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
@@ -993,7 +985,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   margin-left: 0;
   color: #383838;
   font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -1021,7 +1013,13 @@ h6 {
 p {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 0.8em;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+p + p {
+  margin-top: 0.8em;
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: 0;
 }
 a {
@@ -1035,14 +1033,12 @@ a:hover {
   color: #059afa;
 }
 hr {
-  border-top: 2px solid #a6a6a6;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
+  border-bottom: 2px solid #a6a6a6;
   margin-top: 1rem;
   margin-right: 0;
   margin-bottom: 1rem;
   margin-left: 0;
+  box-sizing: border-box;
 }
 img,
 picture {
