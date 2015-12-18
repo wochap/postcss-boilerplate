@@ -25,7 +25,7 @@ h6 { font-size: $font-size-h6 }
 
 p
     margin($paragraph-margin-top 0 $paragraph-margin-top)
-    & + p 
+    & + p
         margin($paragraph-margin-bottom 0 $paragraph-margin-top)
 
 a
@@ -41,6 +41,7 @@ a
 hr
     directional-property( "border", false, null null $base-border )
     margin(space('3') 0)
+    box-sizing: border-box
 
 img,
 picture
