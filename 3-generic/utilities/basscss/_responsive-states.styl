@@ -3,42 +3,24 @@
 //
 // 	doc: http://www.basscss.com/docs/responsive-states/
 
-.show\@xs, .show\@sm, .show\@md, .show\@lg, .show\@xl {
+.show\@xs,
+.show\@sm,
+.show\@md,
+.show\@lg,
+.show\@xl {
 	display: none !important
 }
 
-desde(xs)
-	.show\@xs { display: block !important }
-
-desde(sm)
-	.show\@sm { display: block !important }
-
-desde(md)
-	.show\@md { display: block !important }
-
-desde(lg)
-	.show\@lg { display: block !important }
-
-desde(xl)
-	.show\@xl { display: block !important }
+for $key, $value in $breakpoints
+	+desde($key)
+		.show\@{$key} { display: block !important }
 
 
 //  Hide
 //  --------------------------------------------------------------------------
-desde(xs)
-	.hide\@xs { display: none !important }
-
-desde(sm)
-	.hide\@sm { display: none !important }
-
-desde(md)
-	.hide\@md { display: none !important }
-
-desde(lg)
-	.hide\@lg { display: none !important }
-
-desde(xl)
-	.hide\@xl { display: none !important }
+for $key, $value in $breakpoints
+	+desde($key)
+		.hide\@{$key} { display: none !important }
 
 .display-none { display: none !important }
 
