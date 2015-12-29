@@ -29,10 +29,12 @@ p
         margin($paragraph-margin-bottom 0 $paragraph-margin-top)
 
 a
-    color: $link-color
+    color: inherit
     text-decoration: none
     transition: color $base-duration $base-timing
 
+a[href]:not([class])
+    color: $link-color
     &:active,
     &:focus,
     &:hover
