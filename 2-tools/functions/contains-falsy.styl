@@ -9,6 +9,6 @@
 
 contains-falsy($hash)
     for $item in $hash
-        if !$item
+        if $item == null
             return true
     return false
