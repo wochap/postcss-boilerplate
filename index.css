@@ -11,6 +11,9 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
+body {
+  margin: 0;
+}
 article,
 aside,
 details,
@@ -59,8 +62,7 @@ dfn {
 }
 h1 {
   font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
+  margin: 0.67em 0;
 }
 mark {
   background: #ff0;
@@ -111,7 +113,8 @@ optgroup,
 select,
 textarea {
   color: inherit; /* 1 */
-  font: inherit; /* 2 */ /* 3 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
 }
 button {
   overflow: visible;
@@ -134,13 +137,15 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
+  padding: 0;
 }
 input {
   line-height: normal;
 }
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box; /* 1 */ /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -156,12 +161,12 @@ input[type="search"]::-webkit-search-decoration {
 }
 fieldset {
   border: 1px solid #c0c0c0;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 legend {
-  border: 0; /* 1 */ /* 2 */
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
 }
 textarea {
   overflow: auto;
@@ -172,6 +177,10 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
 }
 :root {
   box-sizing: border-box;
@@ -234,11 +243,14 @@ textarea {
 ::before,
 ::after {
   border-style: solid;
+  border-width: 0;
   box-sizing: inherit;
 }
 * {
   font-size: inherit;
   line-height: inherit;
+  margin: 0;
+  padding: 0;
 }
 ::before,
 ::after {
@@ -302,7 +314,7 @@ body {
   font-weight: 400;
 }
 p {
-  margin-bottom: 1.6rem;
+  margin: 0 0 1.6rem;
 }
 h1,
 h2,
@@ -311,8 +323,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 1.6rem;
+  margin: 2rem 0 1.6rem;
 }
 h1 {
   border-bottom: 0.1rem solid rgba(0,0,0,0.2);
@@ -329,30 +340,26 @@ h3 {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
+  margin: 1.6rem 0 0.4rem;
 }
 h4 {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
+  margin: 1.6rem 0 0.4rem;
 }
 h5 {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
+  margin: 1.6rem 0 0.4rem;
 }
 h6 {
   color: #777;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  margin-top: 1.6rem;
-  margin-bottom: 0.4rem;
+  margin: 1.6rem 0 0.4rem;
 }
 small {
   color: #777;
@@ -363,8 +370,7 @@ pre {
   display: block;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 1.4rem;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0;
   padding: 1.6rem;
   word-break: break-all;
   word-wrap: break-word;
@@ -400,8 +406,7 @@ blockquote {
   border-left: 0.2rem solid #1271db;
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0;
   padding-left: 1.6rem;
 }
 figcaption {
@@ -409,6 +414,9 @@ figcaption {
 }
 html {
   font-size: 62.5%;
+}
+body {
+  padding: 0;
 }
 main,
 header,
@@ -420,18 +428,14 @@ details,
 summary {
   display: block;
   height: auto;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   width: 100%;
 }
 main {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   max-width: 76.8rem;
-  padding-right: 1.6rem;
-  padding-bottom: 1.6rem;
-  padding-left: 1.6rem;
+  padding: 0 1.6rem 1.6rem;
 }
 article {
   clear: left;
@@ -460,8 +464,7 @@ footer {
   display: inline-block;
   float: left;
   max-width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   text-align: center;
 }
 hr {
@@ -607,16 +610,15 @@ label {
 }
 fieldset {
   border: 0;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  margin: 0;
+  padding: 0.8rem 0;
 }
 legend {
   border-bottom: 0.1rem solid #ccc;
   color: #444;
   display: block;
   margin-bottom: 0.8rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding: 0.8rem 0;
   width: 100%;
 }
 textarea {
@@ -650,6 +652,10 @@ input[type=submit] a,
 button a {
   color: #444;
 }
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+}
 input[type=submit]:hover,
 button:hover {
   background: #444;
@@ -678,6 +684,8 @@ button:disabled {
 }
 nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   padding-top: 1.6rem;
   text-align: center;
 }
@@ -701,8 +709,7 @@ table {
   margin-bottom: 1.6rem;
 }
 caption {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding: 0.8rem 0;
 }
 thead th {
   background: #efefef;
@@ -1218,6 +1225,9 @@ tfoot td {
 .u-h6 {
   font-size: 0.75rem;
 }
+.u-m0 {
+  margin: 0;
+}
 .u-mt0 {
   margin-top: 0;
 }
@@ -1329,6 +1339,9 @@ tfoot td {
   margin-left: auto;
   margin-right: auto;
 }
+.u-p0 {
+  padding: 0;
+}
 .u-p1 {
   padding: 0.25rem;
 }
@@ -1429,66 +1442,4 @@ iframe {
 }
 .browsehappy a:hover {
   text-decoration: none;
-}
-body {
-  color: #878787;
-  font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.6em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 1em;
-  color: #383838;
-  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
-  font-weight: 700;
-  line-height: 1.6em;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 1rem;
-}
-h5 {
-  font-size: 0.875rem;
-}
-h6 {
-  font-size: 0.75rem;
-}
-p + p {
-  margin-top: 0.8em;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a[href]:not([class]) {
-  color: #047ac6;
-}
-a[href]:not([class]):active,
-a[href]:not([class]):focus,
-a[href]:not([class]):hover {
-  color: #059afa;
-}
-hr {
-  border-bottom: 2px solid #a6a6a6;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
-}
-img,
-picture {
-  max-width: 100%;
 }
