@@ -8,27 +8,27 @@
 .{$prefix-utility}show\@md,
 .{$prefix-utility}show\@lg,
 .{$prefix-utility}show\@xl {
-	display: none !important
+  display: none !important
 }
 
 for $key, $value in $breakpoints
-	+desde($key)
-		.{$prefix-utility}show\@{$key} { display: block !important }
+  +desde($key)
+    .{$prefix-utility}show\@{$key} { display: block !important }
 
 
 //  Hide
 //  --------------------------------------------------------------------------
 
 for $key, $value in $breakpoints
-	+desde($key)
-		.{$prefix-utility}hide\@{$key} { display: none !important }
+  +desde($key)
+    .{$prefix-utility}hide\@{$key} { display: none !important }
 
 .{$prefix-utility}display-none { display: none !important }
 
 .{$prefix-utility}hide {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }

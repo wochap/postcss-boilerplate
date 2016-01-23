@@ -26,9 +26,9 @@
 //  --------------------------------------------------------------------------
 
 .{$prefix-utility}flex-auto {
-	flex: 1 1 auto;
-	min-width: 0;
-	min-height: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
 }
 .{$prefix-utility}flex-grow { flex: 1 0 auto }
 .{$prefix-utility}flex-none { flex: none }
@@ -41,5 +41,5 @@
 //  --------------------------------------------------------------------------
 
 for $key, $value in $breakpoints
-	+desde($key)
-		.{$prefix-utility}flex\@{$key} { display: flex }
+  +desde($key)
+    .{$prefix-utility}flex\@{$key} { display: flex }
