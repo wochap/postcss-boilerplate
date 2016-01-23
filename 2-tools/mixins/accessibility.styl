@@ -7,23 +7,29 @@
 
 // Hide for both screenreaders and browsers
 //   css-discuss.incutio.com/wiki/Screenreader_Visibility
-hide()
-	display: none;
-	visibility: hidden;
+disappear()
+  display: none !important
+  visibility: hidden
 
 // Hide only visually, but have it available for screenreaders
 //   www.webaim.org/techniques/css/invisiblecontent/
 //   Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal!
-hide-text()
-	size(10px)
-	padding 10px 10px
-	// @include padding(0);
-	// @include margin(-1px);
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute;
+hidden()
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  overflow: hidden
+  clip: rect(0 0 0 0)
+
+  &.focusable:active,
+  &.focusable:focus
+    display: table;
+    position: static;
+    clear: both;
 
 // Hide visually and from screenreaders, but maintain layout
 invisible()
-	visibility: hidden;
+  visibility: hidden

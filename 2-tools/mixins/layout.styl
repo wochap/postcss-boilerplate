@@ -1,16 +1,21 @@
-// center a block
-center($max-width = $wrapper-width-xl, $padding = $wrapper-gutter)
-	if $padding
-		padding(null $padding)
+//  Layout
+//  ==========================================================================
 
-	margin(null auto)
-	display: block
-	max-width: $max-width
-	width: 100%
+
+// create a wrapper
+wrap($max-width = $wrapper-width-xl, $padding = $wrapper-gutter)
+  if $padding != null
+    // añadir padding
+    padding(null $padding)
+
+  margin(null auto)
+  display: block unless @display
+  max-width: $max-width
+  width: 100%
 
 // clearfix
 clearfix()
-	&::after
-		clear: both
-		content: ""
-		display: table
+  &::after
+    clear: both
+    content: ""
+    display: table

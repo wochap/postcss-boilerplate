@@ -1,44 +1,18 @@
 //  Buttons
 //  ==========================================================================
 
-$button-font-size: $font-size-sm;
-$button-font-weight: $font-weight-semi-bold;
-$button-line-height: 1.125em;
-$button-padding-y: 0.5em;
-$button-padding-x: 1em;
+$button-line-height: 1.125em
+$button-padding-y: 0.5em
+$button-padding-x: 1em
 
-@mixin btn() {
-	@include padding($button-padding-y $button-padding-x);
-	@include user-select(none);
-	@extend %input-reset;
-	background-color: transparent;
-	cursor: pointer;
+btn()
+  padding($button-padding-y $button-padding-x)
+  user-select(none)
+  input-reset()
+  cursor: pointer
+  display: inline-block
 
-	// box model
-	display: inline-block;
-
-	// typography
-	color: inherit;
-	font-size: $button-font-size;
-	font-weight: $button-font-weight;
-	line-height: $button-line-height;
-	text-decoration: none;
-}
-
-//  Efectos para botones
-//  --------------------------------------------------------------------------
-@mixin btn-effect($effect) {
-	@if $effect == "shrink" {
-		display: inline-block;
-		transform: scale(1);
-
-		/* transition */
-	    transition-duration: 0.2s;
-	    transition-property: transform;
-	    transition-timing-function: ease;
-
-		&:active {
-			transform: scale(0.9);
-		}
-	}
-}
+  // typography
+  color: inherit
+  line-height: $button-line-height
+  text-decoration: none
