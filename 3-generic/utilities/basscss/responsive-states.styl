@@ -18,6 +18,7 @@ for $key, $value in $breakpoints
 
 //  Hide
 //  --------------------------------------------------------------------------
+
 for $key, $value in $breakpoints
 	+desde($key)
 		.{$prefix-utility}hide\@{$key} { display: none !important }

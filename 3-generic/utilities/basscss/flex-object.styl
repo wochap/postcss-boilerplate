@@ -6,6 +6,7 @@
 
 //  Parent Element Utilities
 //  --------------------------------------------------------------------------
+
 .{$prefix-utility}flex { display: flex }
 
 .{$prefix-utility}flex-column { flex-direction: column }
@@ -23,6 +24,7 @@
 
 //  Child Element Utilities
 //  --------------------------------------------------------------------------
+
 .{$prefix-utility}flex-auto {
 	flex: 1 1 auto;
 	min-width: 0;
@@ -37,6 +39,7 @@
 
 //  Media queries
 //  --------------------------------------------------------------------------
+
 for $key, $value in $breakpoints
 	+desde($key)
 		.{$prefix-utility}flex\@{$key} { display: flex }
