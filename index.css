@@ -279,27 +279,27 @@ th {
 .u-border {
   border-style: solid;
   border-width: 1px;
-  border-color: #020202;
+  border-color: #383838;
 }
 .u-border-top {
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #020202;
+  border-top-color: #383838;
 }
 .u-border-right {
   border-right-style: solid;
   border-right-width: 1px;
-  border-right-color: #020202;
+  border-right-color: #383838;
 }
 .u-border-bottom {
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: #020202;
+  border-bottom-color: #383838;
 }
 .u-border-left {
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: #020202;
+  border-left-color: #383838;
 }
 .u-border-none {
   border: 0;
@@ -935,7 +935,7 @@ input:not([type]),
 textarea {
   background-color: #fff;
   border-radius: 3px;
-  border: 1px solid #020202;
+  border: 1px solid #383838;
   box-shadow: none;
   margin: 0;
   padding: 0.5em;
@@ -958,7 +958,7 @@ input[type="url"]:hover,
 input[type="week"]:hover,
 input:not([type]):hover,
 textarea:hover {
-  border-color: #080808;
+  border-color: #333;
 }
 input[type="color"]:focus,
 input[type="date"]:focus,
@@ -1055,12 +1055,12 @@ table {
 }
 th {
   font-weight: 600;
-  border-bottom: 2px solid #0a0a0a;
+  border-bottom: 2px solid #323232;
   padding: 0.5em 0;
   text-align: left;
 }
 td {
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid #323232;
   padding: 0.5em 0;
 }
 tr,
@@ -1080,7 +1080,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #020202;
+  color: #383838;
   font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1.6em;
@@ -1124,7 +1124,7 @@ a[href]:not([class]):hover {
   color: #059afa;
 }
 hr {
-  border-bottom: 1px solid #020202;
+  border-bottom: 1px solid #383838;
   box-sizing: border-box;
   margin: 1rem 0;
 }
@@ -1147,7 +1147,7 @@ pre {
   padding: 2rem;
 }
 blockquote {
-  border-left: 0.2rem solid $primary-color;
+  border-left: 0.2rem solid #7809ba;
   font-style: italic;
   margin: 2rem 0;
   padding-left: 2rem;
