@@ -6,13 +6,11 @@ $button-padding-y: 0.5em
 $button-padding-x: 1em
 
 btn()
+  input-reset()
   padding($button-padding-y $button-padding-x)
   user-select(none)
-  input-reset()
+  color: inherit
   cursor: pointer
   display: inline-block
-
-  // typography
-  color: inherit
   line-height: $button-line-height
   text-decoration: none
