@@ -14,17 +14,17 @@
 .{$prefix-utility}ml0 { margin-left:   0 }
 
 for $key, $value in $spaces
-    .{$prefix-utility}m{$key}  { margin:        space($key) }
-    .{$prefix-utility}mt{$key} { margin-top:    space($key) }
-    .{$prefix-utility}mr{$key} { margin-right:  space($key) }
-    .{$prefix-utility}mb{$key} { margin-bottom: space($key) }
-    .{$prefix-utility}ml{$key} { margin-left:   space($key) }
+  .{$prefix-utility}m{$key}  { margin:        space($key) }
+  .{$prefix-utility}mt{$key} { margin-top:    space($key) }
+  .{$prefix-utility}mr{$key} { margin-right:  space($key) }
+  .{$prefix-utility}mb{$key} { margin-bottom: space($key) }
+  .{$prefix-utility}ml{$key} { margin-left:   space($key) }
 
 for $key, $value in $spaces
-    .{$prefix-utility}mxn{$key} {
-        margin-left: - space($key);
-        margin-right: - space($key);
-    }
+  .{$prefix-utility}mxn{$key} {
+    margin-left: - space($key);
+    margin-right: - space($key);
+  }
 
 .{$prefix-utility}mx-auto { margin-left: auto; margin-right: auto; }
 
@@ -35,12 +35,12 @@ for $key, $value in $spaces
 .{$prefix-utility}p0  { padding: 0 }
 
 for $key, $value in $spaces
-    .{$prefix-utility}p{$key} { padding: space($key) }
-    .{$prefix-utility}py{$key} {
-        padding-top: space($key);
-        padding-bottom: space($key);
-    }
-    .{$prefix-utility}px{$key} {
-        padding-left: space($key);
-        padding-right: space($key);
-    }
+  .{$prefix-utility}p{$key} { padding: space($key) }
+  .{$prefix-utility}py{$key} {
+    padding-top: space($key);
+    padding-bottom: space($key);
+  }
+  .{$prefix-utility}px{$key} {
+    padding-left: space($key);
+    padding-right: space($key);
+  }
