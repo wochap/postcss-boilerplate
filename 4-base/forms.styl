@@ -1,11 +1,11 @@
 {$all-text-inputs},
 select[multiple=multiple]
-  margin(0)
-  padding(space('2', em))
   background-color: $base-background-color
   border-radius: $base-border-radius
   border: $base-border
   box-shadow: $form-box-shadow
+  margin: 0
+  padding: space('2', 'em')
   transition: border-color $base-duration $base-timing
   width: 100%
 
@@ -18,15 +18,15 @@ select[multiple=multiple]
     outline: none
 
   &:disabled
-    border-color: shade($base-background-color, 15%)
     background-color: shade($base-background-color, 10%)
+    border-color: shade($base-background-color, 15%)
     cursor: not-allowed
 
 fieldset,
 legend
-  margin(0)
-  padding(0)
   border: 0
+  margin: 0
+  padding: 0
 
 input,
 label,
@@ -40,7 +40,7 @@ input[type="search"]
 input[type="checkbox"],
 input[type="radio"]
   display: inline-block
-  margin-right: space('1', em)
+  margin-right: space('1', 'em')
 
 input[type="file"]
   width: 100%
