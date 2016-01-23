@@ -16,6 +16,7 @@
 
 space($size, $unit = 'rem')
   ensure($size, 'string')
+  ensure($unit, 'string')
   $size = $spaces[$size]
   $value = unit($size, $unit)
   return $value

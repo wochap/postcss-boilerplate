@@ -1,60 +1,60 @@
 {$all-text-inputs},
 select[multiple=multiple]
-    margin(0)
-    padding(space('2', em))
-    background-color: $base-background-color
-    border-radius: $base-border-radius
-    border: $base-border
-    box-shadow: $form-box-shadow
-    transition: border-color $base-duration $base-timing
-    width: 100%
+  margin(0)
+  padding(space('2', em))
+  background-color: $base-background-color
+  border-radius: $base-border-radius
+  border: $base-border
+  box-shadow: $form-box-shadow
+  transition: border-color $base-duration $base-timing
+  width: 100%
 
-    &:hover
-        border-color: shade($base-border-color, 20%)
+  &:hover
+    border-color: shade($base-border-color, 20%)
 
-    &:focus
-        border-color: $c-info
-        box-shadow: $form-box-shadow-focus
-        outline: none
+  &:focus
+    border-color: $c-info
+    box-shadow: $form-box-shadow-focus
+    outline: none
 
-    &:disabled
-        border-color: shade($base-background-color, 15%)
-        background-color: shade($base-background-color, 10%)
-        cursor: not-allowed
+  &:disabled
+    border-color: shade($base-background-color, 15%)
+    background-color: shade($base-background-color, 10%)
+    cursor: not-allowed
 
 fieldset,
 legend
-    margin(0)
-    padding(0)
-    border: 0
+  margin(0)
+  padding(0)
+  border: 0
 
 input,
 label,
 textarea
-    display: block
+  display: block
 
 input[type="search"]
-    appearance: none
-    box-sizing: border-box
+  appearance: none
+  box-sizing: border-box
 
 input[type="checkbox"],
 input[type="radio"]
-    display: inline-block
-    margin-right: space('1', em)
+  display: inline-block
+  margin-right: space('1', em)
 
 input[type="file"]
-    width: 100%
+  width: 100%
 
 label
-    fw('s-bold')
+  fw('s-bold')
 
 legend
-    fw('s-bold')
+  fw('s-bold')
 
 select
-    display: inline-block
-    max-width: 100%
-    width: auto
+  display: inline-block
+  max-width: 100%
+  width: auto
 
 textarea
-    resize: vertical
+  resize: vertical
