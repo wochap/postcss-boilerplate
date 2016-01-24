@@ -11,6 +11,6 @@ contains-falsy($vals)
   for $val in $vals
     if $val == null
       error('you can not use null, use false')
-    if $val == false
+    if $val == false || $val == 'false'
       return true
-    return false
+  return false
