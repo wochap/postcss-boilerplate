@@ -1,4 +1,4 @@
-## Stylus PostCSS Base
+## Stylus Base
 
 > v.0.0.9
 
