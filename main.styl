@@ -6,27 +6,56 @@
  * Made by Gean Bonifacio
  */
 
-@import "1-settings/colors"
-@import "1-settings/typography"
-@import "1-settings/media-queries"
-@import "1-settings/spaces"
-@import "1-settings/variables"
+//  Settings
+//  ==========================================================================
+// 
+//  Variables.
 
-@import "2-tools/index"
+@import "1-settings/main"
 
-@import "3-generic/index"
 
-@import "4-base/buttons"
-@import "4-base/core"
-@import "4-base/forms"
-@import "4-base/lists"
-@import "4-base/tables"
-@import "4-base/typography"
-@import "4-base/font"
-@import "4-base/icon"
+//  Tools
+//  ==========================================================================
+// 
+//  Functions, mixins etc.
 
-@import "5-objects/index"
+@import "2-tools/main"
 
-@import "6-components/index"
 
-@import "7-trumps/index"
+//  Generic
+//  ==========================================================================
+// 
+//  Low-specificity, far-reaching rulesets.
+
+@import "3-generic/main"
+
+
+//  Base
+//  ==========================================================================
+// 
+//  Unclassed HTML elements.
+
+@import "4-base/main"
+
+
+//  Objects
+//  ==========================================================================
+// 
+//  Design-free objects, abstractions and patterns.
+
+@import "5-objects/main"
+
+
+//  Components
+//  ==========================================================================
+// 
+//  Components and widgets.
+
+@import "6-components/main"
+
+
+//  Trumps
+//  ==========================================================================
+// 
+//  Helper classes and overrides. 
+@import "7-trumps/main"
