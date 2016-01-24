@@ -2,16 +2,24 @@
 //  ==========================================================================
 
 
-// create a wrapper
-wrap($max-width = $wrapper-width-xl, $padding = $wrapper-gutter)
+// center a block
+center($max-width = $wrapper-width-xl, $padding = $wrapper-gutter)
   if $padding != null
     // añadir padding
-    padding(null $padding)
+    padding(false $padding)
 
-  margin(null auto)
+  margin(false auto)
   display: block unless @display
   max-width: $max-width
   width: 100%
+
+// create a wrapper
+wrap()
+  center()
+  +hasta('lg')
+    max-width: $wrapper-width-md
+  +desde-hasta('lg', 'xl')
+    max-width: $wrapper-width-lg
 
 // clearfix
 clearfix()
