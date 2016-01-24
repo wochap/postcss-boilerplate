@@ -1,6 +1,6 @@
 ## Postcss boilerplate
 
-> v.0.0.6
+> v.0.0.7
 
 ### What Is It?
 
@@ -10,15 +10,20 @@ For each new project I set up I keep finding myself creating the same directory 
 
 ### Plugins
 
-* [Axis](http://axis.netlify.com/)
-* [Kouto Swiss](http://kouto-swiss.io/)
-* [Lost Grid](http://corysimmons.github.io/lost/)
+#### Stylus
+
+* [Axis](http://axis.netlify.com/) (optional)
+* [Rupture](http://jenius.github.io/rupture/) (optional)
+* [Kouto Swiss](http://kouto-swiss.io/) (optional)
+
+#### PostCSS
+
+* [Lost Grid](http://corysimmons.github.io/lost/) (optional)
 
 ### Libreries
 
-* [Normalize](https://necolas.github.io/normalize.css/)
-* [Marx](http://matthewblode.com/marx/)
-* [Basscss](http://www.basscss.com/docs/)
+* [Normalize](https://necolas.github.io/normalize.css/) (modified)
+* [Basscss](http://www.basscss.com/docs/) (modified)
 
 ### Features
 
@@ -62,6 +67,16 @@ For each new project I set up I keep finding myself creating the same directory 
     * Usually carry !important.
 
 ## Changelog
+
+### 0.0.7
+
+  * Remove Marx css reset librerie
+  * Add custom styles to Normalize
+  * Update base styles, inspired in Marx styles
+  * Fix directional mixin (can't use null)
+  * Add wrap mixin and utility
+  * Update variables colors
+  * Add more headings levels
 
 ### 0.0.6
 
