@@ -189,6 +189,25 @@ td,
 th {
   padding: 0;
 }
+.u-wrap {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  max-width: 1200px;
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .u-wrap {
+    max-width: 780px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .u-wrap {
+    max-width: 1000px;
+  }
+}
 .u-align-baseline {
   vertical-align: baseline;
 }
@@ -1042,14 +1061,6 @@ select {
 }
 textarea {
   resize: vertical;
-}
-main {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem 1rem;
-}
-article {
-  max-width: calc(60% - 1rem);
 }
 ul,
 ol,
