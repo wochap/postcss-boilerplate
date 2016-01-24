@@ -1,10 +1,10 @@
-## Postcss boilerplate
+## Stylus PostCSS Base
 
-> v.0.0.8
+> v.0.0.9
 
 ### What Is It?
 
-Stylus Postcss project boilerplate following the ITCSS (Inverted Triangle CSS) methodology. If you're interested in finding out more about ITCSS you can [watch this talk by Harry Roberts](http://youtu.be/1OKZOV-iLj4).
+It is a Stylus Postcss Base following the ITCSS (Inverted Triangle CSS) methodology. If you're interested in finding out more about ITCSS you can [watch this talk by Harry Roberts](http://youtu.be/1OKZOV-iLj4).
 
 For each new project I set up I keep finding myself creating the same directory and `@import` file structure. To speed things up I've generated this repo as a quick and easy starting point.
 
@@ -20,12 +20,12 @@ For each new project I set up I keep finding myself creating the same directory 
 
 * [Lost Grid](http://corysimmons.github.io/lost/) (optional)
 
-### Libreries
+### Libraries
 
 * [Normalize](https://necolas.github.io/normalize.css/) (modified)
 * [Basscss](http://www.basscss.com/docs/) (modified)
 
-### Features
+### CSS Methodologies
 
 * Architecture:
  [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf) is a sane, scalable, managed architecture for CSS.
@@ -33,7 +33,10 @@ For each new project I set up I keep finding myself creating the same directory 
 * Naming convention:
  [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)  is an approach to front-end development designed with flexibility and ease of modification in mind.
 
-### Directory structure
+* CSS Namespacing:
+ [Transparent UI code](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+
+### Directory Structure
 
 1. `Settings`
     * Globally-available settings.
@@ -69,6 +72,11 @@ For each new project I set up I keep finding myself creating the same directory 
 ## [Docs](https://github.com/wochap/postcss-boilerplate/blob/master/docs.md)
 
 ## Changelog
+
+### 0.0.9
+
+  * Rename partials files (index to main)
+  * Double quotes to single
 
 ### 0.0.8
 
