@@ -56,18 +56,18 @@ collapse-directionals($vals)
 ///   List of values
 
 directional-property( $pre, $suf, $vals )
-  if last( $vals ) == "!important"
+  if last( $vals ) == '!important'
     _void = pop( $vals )    // remove !important from vals
-    $important = "!important"
+    $important = '!important'
   else
-    $important = ""
+    $important = ''
 
   // Property Names
-  $top    =  $pre + "-top"    + ($suf ? "-" + $suf : "")
-  $right  =  $pre + "-right"  + ($suf ? "-" + $suf : "")
-  $bottom =  $pre + "-bottom" + ($suf ? "-" + $suf : "")
-  $left   =  $pre + "-left"   + ($suf ? "-" + $suf : "")
-  $all    =  $pre + ""        + ($suf ? "-" + $suf : "")
+  $top    =  $pre + '-top'    + ($suf ? '-' + $suf : '')
+  $right  =  $pre + '-right'  + ($suf ? '-' + $suf : '')
+  $bottom =  $pre + '-bottom' + ($suf ? '-' + $suf : '')
+  $left   =  $pre + '-left'   + ($suf ? '-' + $suf : '')
+  $all    =  $pre + ''        + ($suf ? '-' + $suf : '')
 
   $vals = collapse-directionals($vals)
 
