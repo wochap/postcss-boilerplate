@@ -3,17 +3,20 @@ table
   table-layout: fixed
   width: 100%
 
-th
-  fw('s-bold')
-  border-bottom: 2px solid shade($base-border-color, 25%)
-  padding: space('2', 'em') 0
-  text-align: left
-
+th,
 td
   border-bottom: 1px solid shade($base-border-color, 25%)
   padding: space('2', 'em') 0
+
+th
+  fw('s-bold')
+  text-align: left
 
 tr,
 td,
 th
   vertical-align: middle
+
+thead
+  th
+    border-bottom-width 2px
