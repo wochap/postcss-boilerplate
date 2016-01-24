@@ -1,6 +1,6 @@
 /// Directional-property mixins are shorthands for writing properties like the following
 ///
-/// @ignore You can also use `false` instead of `null`.
+/// @ignore You can use `false`, dont use `null`.
 ///
 /// @param {List} $vals
 ///   List of directional values
@@ -32,15 +32,6 @@ collapse-directionals($vals)
   $c = length($vals) < 3 ? $a : $vals[2]
   $d = length($vals) < 2 ? $a : $vals[length($vals) < 4 ?  1 : 3]
 
-  if $a == 0
-    $a = 0
-  if $b == 0
-    $b = 0
-  if $c == 0
-    $c = 0
-  if $d == 0
-    $d = 0
-
   if $a == $b and $a == $c and $a == $d
     $output = $a
   else if $a == $c and $b == $d
@@ -70,6 +61,7 @@ directional-property( $pre, $suf, $vals )
     $important = "!important"
   else
     $important = ""
+
   // Property Names
   $top    =  $pre + "-top"    + ($suf ? "-" + $suf : "")
   $right  =  $pre + "-right"  + ($suf ? "-" + $suf : "")
@@ -80,30 +72,30 @@ directional-property( $pre, $suf, $vals )
   $vals = collapse-directionals($vals)
 
   if contains-falsy($vals)
-    if $vals[0]
+    if $vals[0] != false
       {$top}: $vals[0] unquote($important)
 
     if length( $vals ) == 1
-      if $vals[0]
+      if $vals[0] != false
         {$right}: $vals[0] unquote($important)
     else
-      if $vals[1]
+      if $vals[1] != false
         {$right}: $vals[1] unquote($important)
 
     if length($vals) == 2
-      if $vals[0]
+      if $vals[0] != false
         {$bottom}: $vals[0] unquote($important)
-      if $vals[1]
+      if $vals[1] != false
         {$left}:   $vals[1] unquote($important)
     else if length($vals) == 3
-      if $vals[2]
+      if $vals[2] != false
         {$bottom}: $vals[2] unquote($important)
-      if $vals[1]
+      if $vals[1] != false
         {$left}:   $vals[1] unquote($important)
     else if length($vals) == 4
-      if $vals[2]
+      if $vals[2] != false
         {$bottom}: $vals[2] unquote($important)
-      if $vals[3]
+      if $vals[3] != false
         {$left}:   $vals[3] unquote($important)
   else
     {$all}: $vals unquote( $important )

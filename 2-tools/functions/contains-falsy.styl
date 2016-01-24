@@ -7,8 +7,10 @@
 ///
 /// @return {Bool}
 
-contains-falsy($hash)
-  for $item in $hash
-    if $item == null
+contains-falsy($vals)
+  for $val in $vals
+    if $val == null
+      error('you can not use null, use false')
+    if $val == false
       return true
-  return false
+    return false
