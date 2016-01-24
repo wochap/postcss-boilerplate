@@ -889,7 +889,21 @@ th {
 }
 input[type="submit"],
 button {
+  appearance: none;
+  background: rgba(0,0,0,0);
+  border: 0;
+  outline: 0;
+  padding: 0;
+  padding: 0.5em 1em;
+  color: inherit;
+  cursor: pointer;
   display: inline-block;
+  line-height: 1.125em;
+  text-decoration: none;
+}
+input[type="submit"]:-webkit-autofill,
+button:-webkit-autofill {
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0) inset;
 }
 input[type="submit"]:disabled,
 button:disabled {
