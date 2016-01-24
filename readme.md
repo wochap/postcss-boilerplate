@@ -1,6 +1,6 @@
 ## Postcss boilerplate
 
-> v.0.0.7
+> v.0.0.8
 
 ### What Is It?
 
@@ -66,7 +66,15 @@ For each new project I set up I keep finding myself creating the same directory 
     * Only affect one piece of the DOM at a time.
     * Usually carry !important.
 
+## [Docs](https://github.com/wochap/postcss-boilerplate/blob/master/docs.md)
+
 ## Changelog
+
+### 0.0.8
+
+  * Move utilities to Trumps folder
+  * Update Settings variables
+  * Fix contains-falsy function
 
 ### 0.0.7
 
