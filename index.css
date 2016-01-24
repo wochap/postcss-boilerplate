@@ -189,25 +189,6 @@ td,
 th {
   padding: 0;
 }
-.u-wrap {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  max-width: 1200px;
-  width: 100%;
-}
-@media screen and (max-width: 991px) {
-  .u-wrap {
-    max-width: 780px;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .u-wrap {
-    max-width: 1000px;
-  }
-}
 .u-align-baseline {
   vertical-align: baseline;
 }
@@ -522,6 +503,25 @@ th {
 .u-border-box {
   box-sizing: border-box;
 }
+.u-wrap {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  max-width: 1200px;
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .u-wrap {
+    max-width: 780px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .u-wrap {
+    max-width: 1000px;
+  }
+}
 .u-relative {
   position: relative;
 }
@@ -679,6 +679,20 @@ th {
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
+}
+.u-h00,
+.u-h0,
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+.u-h5,
+.u-h6 {
+  color: #383838;
+  font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 0 0 1em;
 }
 .u-h00 {
   font-size: 3rem;
@@ -1094,7 +1108,7 @@ body {
   color: #3d3d3d;
   font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 h1,
 h2,
@@ -1105,7 +1119,7 @@ h6 {
   color: #383838;
   font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1.6;
   margin: 0 0 1em;
 }
 h1 {
