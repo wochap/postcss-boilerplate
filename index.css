@@ -305,22 +305,22 @@ th {
   border: 0;
 }
 .u-rounded {
-  border-radius: 3px;
+  border-radius: 0.188em;
 }
 .u-circle {
   border-radius: 50%;
 }
 .u-rounded-top {
-  border-radius: 3px 3px 0 0;
+  border-radius: 0.188em 0.188em 0 0;
 }
 .u-rounded-right {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 0.188em 0.188em 0;
 }
 .u-rounded-bottom {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 0.188em 0.188em;
 }
 .u-rounded-left {
-  border-radius: 3px 0 0 3px;
+  border-radius: 0.188em 0 0 0.188em;
 }
 .u-not-rounded {
   border-radius: 0;
@@ -895,6 +895,7 @@ button {
   outline: 0;
   padding: 0;
   padding: 0.5em 1em;
+  border-radius: 0.188em;
   color: inherit;
   cursor: pointer;
   display: inline-block;
@@ -939,7 +940,7 @@ input[type="week"],
 input:not([type]),
 textarea {
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 0.188em;
   border: 1px solid #383838;
   box-shadow: none;
   margin: 0;
