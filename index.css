@@ -689,6 +689,7 @@ th {
 .u-h5,
 .u-h6 {
   color: #383838;
+  display: block;
   font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1.6;
