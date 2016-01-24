@@ -1,5 +1,5 @@
 /*
- * Postcss boilerplate - v0.0.5
+ * Postcss boilerplate - v0.0.7
  * A boilerplate for Postcss projects
  * https://github.com/wochap/postcss-boilerplate
  *
@@ -62,7 +62,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 dfn {
   font-style: italic;
@@ -179,7 +179,7 @@ textarea {
   overflow: auto;
 }
 optgroup {
-  font-weight: bold;
+  font-weight: 700;
 }
 table {
   border-collapse: collapse;
@@ -202,7 +202,7 @@ th {
   vertical-align: bottom;
 }
 .u-bg-black {
-  background-color: #222;
+  background-color: #000;
 }
 .u-bg-gray {
   background-color: #aaa;
@@ -326,7 +326,7 @@ th {
   border-radius: 0;
 }
 .u-black {
-  color: #222;
+  color: #000;
 }
 .u-gray {
   color: #aaa;
@@ -998,7 +998,7 @@ input[type="url"]:hover,
 input[type="week"]:hover,
 input:not([type]):hover,
 textarea:hover {
-  border-color: #333;
+  border-color: #2c2c2c;
 }
 input[type="color"]:focus,
 input[type="date"]:focus,
@@ -1036,8 +1036,8 @@ input[type="url"]:disabled,
 input[type="week"]:disabled,
 input:not([type]):disabled,
 textarea:disabled {
-  background-color: #e8e8e8;
-  border-color: #ddd;
+  background-color: #e5e5e5;
+  border-color: #d8d8d8;
   cursor: not-allowed;
 }
 fieldset,
@@ -1092,12 +1092,12 @@ table {
 }
 th {
   font-weight: 600;
-  border-bottom: 2px solid #323232;
+  border-bottom: 2px solid #2a2a2a;
   padding: 0.5em 0;
   text-align: left;
 }
 td {
-  border-bottom: 1px solid #323232;
+  border-bottom: 1px solid #2a2a2a;
   padding: 0.5em 0;
 }
 tr,
@@ -1173,7 +1173,7 @@ picture {
 pre,
 code {
   background: #efefef;
-  color: #222;
+  color: #000;
   font-size: 1rem;
   word-break: break-all;
   word-wrap: break-word;
