@@ -99,3 +99,9 @@ For each new project I set up I keep finding myself creating the same directory 
   * Add Marx css reset librerie
   * Update Normalize
   * Comment base files
+
+## Todo
+
+  * Add mixins and functions docs  
+  * Add mixins and functions tests
+  
