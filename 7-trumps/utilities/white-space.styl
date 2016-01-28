@@ -20,9 +20,8 @@ for $key, $value in $spaces
   .{$prefix-utility}mb{$key} { margin-bottom: space($key) }
   .{$prefix-utility}ml{$key} { margin-left:   space($key) }
 
-for $key, $value in $spaces
   .{$prefix-utility}mxn{$key} {
-    margin-left: - space($key);
+    margin-left:  - space($key);
     margin-right: - space($key);
   }
 
@@ -32,15 +31,24 @@ for $key, $value in $spaces
 //  Padding
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}p0  { padding: 0 }
+.{$prefix-utility}p0  { padding:        0 }
+.{$prefix-utility}pt0 { padding-top:    0 }
+.{$prefix-utility}pr0 { padding-right:  0 }
+.{$prefix-utility}pb0 { padding-bottom: 0 }
+.{$prefix-utility}pl0 { padding-left:   0 }
 
 for $key, $value in $spaces
-  .{$prefix-utility}p{$key} { padding: space($key) }
+  .{$prefix-utility}p{$key}  { padding:        space($key) }
+  .{$prefix-utility}pt{$key} { padding-top:    space($key) }
+  .{$prefix-utility}pr{$key} { padding-right:  space($key) }
+  .{$prefix-utility}pb{$key} { padding-bottom: space($key) }
+  .{$prefix-utility}pl{$key} { padding-left:   space($key) }
+
   .{$prefix-utility}py{$key} {
-    padding-top: space($key);
+    padding-top:    space($key);
     padding-bottom: space($key);
   }
   .{$prefix-utility}px{$key} {
-    padding-left: space($key);
+    padding-left:  space($key);
     padding-right: space($key);
   }
