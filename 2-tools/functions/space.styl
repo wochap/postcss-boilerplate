@@ -1,18 +1,9 @@
-/// Provides a method for choose a space size
-///
-/// @param {key} $vals
-///   $spaces hash key
-/// @param {unit} $vals
-///   em or rem
-///
-/// @example styl - Usage
-///   .element
-///     margin: space('1', em)
-///
-/// @example css - CSS Output
-///   .element {
-///     margin: 0.25em
-///   }
+// Provides a method for choose a space size
+//
+// @param {String} $size
+//   Hash key
+// @param {String} $unit
+//   Unit to use
 
 space($size, $unit = 'rem')
   ensure($size, 'string')

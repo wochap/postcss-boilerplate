@@ -1,0 +1,19 @@
+//  Decoration
+//  ==========================================================================
+
+
+borde($height = 1.1em, $width = 1px, $gutter = 1em, $color = currentColor)
+  margin-right: $gutter
+  padding-right: $gutter
+  position: relative
+
+  &::after
+    background-color: $color
+    content: ''
+    display: block
+    height: $height
+    left: 100%
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    width: $width

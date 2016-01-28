@@ -1,28 +1,13 @@
-/// Directional-property mixins are shorthands for writing properties like the following
-///
-/// @ignore You can use `false`, dont use `null`.
-///
-/// @param {List} $vals
-///   List of directional values
-///
-/// @example scss - Usage
-///   .element {
-///     @include border-style(dotted null);
-///     @include margin(null 0 10px);
-///   }
-///
-/// @example css - CSS Output
-///   .element {
-///     border-bottom-style: dotted;
-///     border-top-style: dotted;
-///     margin-bottom: 10px;
-///     margin-left: 0;
-///     margin-right: 0;
-///   }
-///
-/// @require {function} contains-falsy
-///
-/// @return {List}
+// Directional-property mixins are shorthands for writing properties like the following
+//
+// @access private
+//
+// @ignore You can use `false`, dont use `null`.
+//
+// @param {List} $vals
+//   List of directional values
+//
+// @return {List}
 
 collapse-directionals($vals)
   $output = null
@@ -44,25 +29,24 @@ collapse-directionals($vals)
   return $output
 
 
-/// Output directional properties, for instance `margin`.
-///
-/// @access private
-///
-/// @param {String} $pre
-///   Prefix to use
-/// @param {String} $suf
-///   Suffix to use
-/// @param {List} $vals
-///   List of values
+// Output directional properties, for instance `margin`.
+//
+// @param {String} $pre
+//   Prefix to use
+// @param {String} $suf
+//   Suffix to use
+// @param {List} $vals
+//   List of values
+//
+// @require {function} contains-falsy
 
-directional-property( $pre, $suf, $vals )
+directional-property($pre, $suf, $vals)
   if last( $vals ) == '!important'
-    _void = pop( $vals )    // remove !important from vals
+    _void = pop( $vals )
     $important = '!important'
   else
     $important = ''
 
-  // Property Names
   $top    =  $pre + '-top'    + ($suf ? '-' + $suf : '')
   $right  =  $pre + '-right'  + ($suf ? '-' + $suf : '')
   $bottom =  $pre + '-bottom' + ($suf ? '-' + $suf : '')
@@ -97,5 +81,6 @@ directional-property( $pre, $suf, $vals )
         {$bottom}: $vals[2] unquote($important)
       if $vals[3] != false
         {$left}:   $vals[3] unquote($important)
+
   else
     {$all}: $vals unquote( $important )

@@ -1,3 +1,7 @@
+//  Resets
+//  ==========================================================================
+
+
 input-reset()
   appearance: none
   background: $transparent
@@ -5,10 +9,11 @@ input-reset()
   outline: 0
   padding: 0
 
-  &:-webkit-autofill
+  &:autofill
     box-shadow: 0 0 0 1000px $transparent inset
 
 list-reset()
-  margin(0 null)
-  padding-left: 0
   list-style: none
+  margin-bottom 0
+  margin-top 0
+  padding-left: 0
