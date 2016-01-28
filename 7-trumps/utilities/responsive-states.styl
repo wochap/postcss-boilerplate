@@ -1,27 +1,27 @@
-//  Responsive States
-//  ==========================================================================
+//  Responsive States
+//  ==========================================================================
 //
 // 	doc: http://www.basscss.com/docs/responsive-states/
 
-.{$prefix-utility}show\@xs,
-.{$prefix-utility}show\@sm,
-.{$prefix-utility}show\@md,
-.{$prefix-utility}show\@lg,
-.{$prefix-utility}show\@xl {
+.{$prefix-utility + 'show\@xs'},
+.{$prefix-utility + 'show\@sm'},
+.{$prefix-utility + 'show\@md'},
+.{$prefix-utility + 'show\@lg'},
+.{$prefix-utility + 'show\@xl'} {
   display: none !important
 }
 
 for $key, $value in $breakpoints
   +desde($key)
-    .{$prefix-utility}show\@{$key} { display: block !important }
+    .{$prefix-utility + 'show\@' + $key} { display: block !important }
 
 
 //  Hide
-//  --------------------------------------------------------------------------
+//  --------------------------------------------------------------------------
 
 for $key, $value in $breakpoints
   +desde($key)
-    .{$prefix-utility}hide\@{$key} { display: none !important }
+    .{$prefix-utility + 'hide\@' + $key} { display: none !important }
 
 .{$prefix-utility}display-none { display: none !important }
 
