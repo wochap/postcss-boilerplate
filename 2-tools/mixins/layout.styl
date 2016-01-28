@@ -14,12 +14,17 @@ center($max-width = $wrapper-width-xl, $padding = $wrapper-gutter)
     padding-right: $padding
 
 // create a wrapper
-wrap()
+wrapper()
   center()
   +hasta('lg')
     max-width: $wrapper-width-md
   +desde-hasta('lg', 'xl')
     max-width: $wrapper-width-lg
+
+// create a block element
+block()
+  display: block unless @display
+  width: 100%
 
 // clearfix
 clearfix()
