@@ -4,7 +4,7 @@
 
 ### What Is It?
 
-It is a Stylus Postcss Base following the ITCSS (Inverted Triangle CSS) methodology. If you're interested in finding out more about ITCSS you can [watch this talk by Harry Roberts](http://youtu.be/1OKZOV-iLj4).
+It is a Stylus Base following the ITCSS (Inverted Triangle CSS) methodology. If you're interested in finding out more about ITCSS you can [watch this talk by Harry Roberts](http://youtu.be/1OKZOV-iLj4).
 
 For each new project I set up I keep finding myself creating the same directory and `@import` file structure. To speed things up I've generated this repo as a quick and easy starting point.
 
@@ -69,7 +69,7 @@ For each new project I set up I keep finding myself creating the same directory 
     * Only affect one piece of the DOM at a time.
     * Usually carry !important.
 
-## [Docs](https://github.com/wochap/postcss-boilerplate/blob/master/docs.md)
+## [Docs](https://github.com/wochap/stylus-base/blob/master/docs.md)
 
 ## Changelog
 
@@ -104,4 +104,3 @@ For each new project I set up I keep finding myself creating the same directory 
 
   * Add mixins and functions docs  
   * Add mixins and functions tests
-  
