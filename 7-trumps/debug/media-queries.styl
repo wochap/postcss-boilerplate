@@ -18,7 +18,7 @@ if $debug-media-queries
 
   for $key, $value in $breakpoints
     +desde($key)
-    body
-      &::after
-      &::before
-        content: $key
+      body
+        &::after
+        &::before
+          content: $key
