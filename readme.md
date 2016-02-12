@@ -14,11 +14,12 @@ For each new project I set up I keep finding myself creating the same directory 
 
 * [Axis](http://axis.netlify.com/) (optional)
 * [Rupture](http://jenius.github.io/rupture/) (optional)
-* [Kouto Swiss](http://kouto-swiss.io/) (optional)
+* [Modernizr Stylus](https://www.npmjs.com/package/modernizr-stylus) (optional)
 
 #### PostCSS
 
 * [Lost Grid](http://corysimmons.github.io/lost/) (optional)
+* [Position](https://github.com/seaneking/postcss-position) (optional)
 
 ### Libraries
 
