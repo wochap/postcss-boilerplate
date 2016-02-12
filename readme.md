@@ -1,6 +1,6 @@
 ## Stylus Base
 
-> v.0.0.9
+> v.0.1.0
 
 ### What Is It?
 
@@ -73,6 +73,12 @@ For each new project I set up I keep finding myself creating the same directory 
 ## [Docs](https://github.com/wochap/stylus-base/blob/master/docs.md)
 
 ## Changelog
+
+### 0.1.0
+
+  * Update utilities Basscss
+  * Update base styles
+  * Update Tools/mixins folder structure
 
 ### 0.0.9
 
