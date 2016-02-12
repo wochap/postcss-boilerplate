@@ -16,6 +16,7 @@ if $debug-media-queries
       position: absolute
       top: 50%
       transform: translate3d(-50%, -50%, 0)
+      z-index: 9999
 
   for $key, $value in $breakpoints
     +desde($key)
