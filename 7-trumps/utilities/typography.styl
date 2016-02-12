@@ -33,6 +33,10 @@
   padding-left: 0;
 }
 
+
+//  Headings
+//  --------------------------------------------------------------------------
+
 .{$prefix-utility}h00,
 .{$prefix-utility}h0,
 .{$prefix-utility}h1,
@@ -41,7 +45,7 @@
 .{$prefix-utility}h4,
 .{$prefix-utility}h5,
 .{$prefix-utility}h6 {
-  // color: $heading-color
+  color: $heading-color
   display block
   font-family: $heading-font-family
   font-weight: $heading-font-weight
@@ -57,3 +61,10 @@
 .{$prefix-utility}h4 { font-size: $font-size-h4 }
 .{$prefix-utility}h5 { font-size: $font-size-h5 }
 .{$prefix-utility}h6 { font-size: $font-size-h6 }
+
+
+//  Font sizes
+//  --------------------------------------------------------------------------
+
+for $key, $value in $font-size
+  .{$prefix-utility + 'fz-' + $key} { font-size: $value }
