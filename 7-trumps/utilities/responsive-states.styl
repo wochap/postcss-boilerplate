@@ -3,6 +3,10 @@
 //
 // 	doc: http://www.basscss.com/docs/responsive-states/
 
+
+//  Show
+//  --------------------------------------------------------------------------
+
 .{$prefix-utility + 'show\@xs'},
 .{$prefix-utility + 'show\@sm'},
 .{$prefix-utility + 'show\@md'},
@@ -26,9 +30,9 @@ for $key, $value in $breakpoints
 .{$prefix-utility}display-none { display: none !important }
 
 .{$prefix-utility}hide {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
