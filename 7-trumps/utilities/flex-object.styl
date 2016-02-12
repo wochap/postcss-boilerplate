@@ -1,7 +1,7 @@
 //  Flex Object
 //  ==========================================================================
 //
-// 	doc: http://www.basscss.com/docs/flex-object/
+// 	doc: http://www.basscss.com/#basscss-flexbox
 
 
 //  Parent Element Utilities
@@ -13,17 +13,34 @@
 .{$prefix-utility}flex-row    { flex-direction: row }
 .{$prefix-utility}flex-wrap   { flex-wrap: wrap }
 
-.{$prefix-utility}flex-center   { align-items: center }
-.{$prefix-utility}flex-baseline { align-items: baseline }
-.{$prefix-utility}flex-stretch  { align-items: stretch }
-.{$prefix-utility}flex-start    { align-items: flex-start }
-.{$prefix-utility}flex-end      { align-items: flex-end }
+.{$prefix-utility}items-baseline { align-items: baseline }
+.{$prefix-utility}items-center   { align-items: center }
+.{$prefix-utility}items-end      { align-items: flex-end }
+.{$prefix-utility}items-start    { align-items: flex-start }
+.{$prefix-utility}items-stretch  { align-items: stretch }
 
-.{$prefix-utility}flex-justify  { justify-content: space-between }
+.{$prefix-utility}justify-around  { justify-content: space-around }
+.{$prefix-utility}justify-between { justify-content: space-between }
+.{$prefix-utility}justify-center  { justify-content: center }
+.{$prefix-utility}justify-end     { justify-content: flex-end }
+.{$prefix-utility}justify-start   { justify-content: flex-start }
+
+.{$prefix-utility}content-around  { align-content: space-around }
+.{$prefix-utility}content-between { align-content: space-between }
+.{$prefix-utility}content-center  { align-content: center }
+.{$prefix-utility}content-end     { align-content: flex-end }
+.{$prefix-utility}content-start   { align-content: flex-start }
+.{$prefix-utility}content-stretch { align-content: stretch }
 
 
 //  Child Element Utilities
 //  --------------------------------------------------------------------------
+
+.{$prefix-utility}align-self-baseline { align-self: baseline }
+.{$prefix-utility}align-self-center   { align-self: center }
+.{$prefix-utility}align-self-end      { align-self: flex-end }
+.{$prefix-utility}align-self-start    { align-self: flex-start }
+.{$prefix-utility}align-self-stretch  { align-self: stretch }
 
 .{$prefix-utility}flex-auto {
   flex: 1 1 auto;
@@ -33,8 +50,11 @@
 .{$prefix-utility}flex-grow { flex: 1 0 auto }
 .{$prefix-utility}flex-none { flex: none }
 
-.{$prefix-utility}flex-first { order: -1 }
-.{$prefix-utility}flex-last  { order: 99999 }
+.{$prefix-utility}order-0 { order: 0 }
+.{$prefix-utility}order-1 { order: 1 }
+.{$prefix-utility}order-2 { order: 2 }
+.{$prefix-utility}order-3 { order: 3 }
+.{$prefix-utility}order-last { order: 99999 }
 
 
 //  Media queries
