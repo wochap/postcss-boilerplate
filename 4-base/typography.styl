@@ -4,11 +4,11 @@ body
   font-size: $base-font-size
   line-height: $base-line-height
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1
+h2
+h3
+h4
+h5
 h6
   color: $heading-color
   font-family: $heading-font-family
@@ -37,8 +37,8 @@ a
 a[href]:not([class])
   color: $link-color
 
-  &:active,
-  &:focus,
+  &:active
+  &:focus
   &:hover
     color: $link-color-hover
 
@@ -47,12 +47,12 @@ hr
   box-sizing: border-box
   margin: space('3', 'rem') 0
 
-img,
+img
 picture
   margin: 0
   max-width: 100%
 
-pre,
+pre
 code
   background: $light-grey
   color: $black
@@ -63,10 +63,11 @@ code
 pre
   display: block
   margin: space('3', 'rem') 0
-  padding: space('3', 'rem')
+  padding: space('3', 'em')
 
 blockquote
-  padding(false space('4', 'rem'))
   border-left: .2rem solid $color-primary
   font-style: italic
   margin: space('3', 'rem') 0
+  padding-left: space('4', 'em')
+  padding-right: space('4', 'em')

@@ -5,15 +5,15 @@
 // Since `*` has a specificity of 0, it does not override the `html` value
 // making all elements inheriting from the root box-sizing value
 // See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-*,
-*::before,
+*
+*::before
 *::after
   box-sizing: inherit
 
-video,
-audio,
-embed,
-object,
-input,
+video
+audio
+embed
+object
+input
 iframe
   max-width: 100%
