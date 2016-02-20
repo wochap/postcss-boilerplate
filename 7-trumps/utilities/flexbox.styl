@@ -62,4 +62,4 @@
 
 for $key, $value in $breakpoints
   +desde($key)
-    .{$prefix-utility}flex\@{$key} { display: flex }
+    .{$prefix-utility + 'flex\@' + $key} { display: flex }
