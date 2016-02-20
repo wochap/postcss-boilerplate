@@ -1,9 +1,0 @@
-assign-inputs($inputs, $pseudo = null)
-  $list = ()
-
-  for $input in $inputs
-    $input = $pseudo ? $input + ":" + $pseudo : $input
-    push($list, $input)
-
-  $list = join(",", $list)
-  return $list
