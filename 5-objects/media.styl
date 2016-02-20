@@ -1,0 +1,26 @@
+//  Media
+//  ==========================================================================
+
+
+.{$prefix-object}media
+  align-items: flex-start
+  display: flex
+  flex-direction: row
+  padding: $space-3
+
+  &.{$prefix-state}reverse
+    flex-direction: row-reverse
+
+    .{$prefix-object}left
+      margin-left: $space-2
+      margin-right: 0
+
+.{$prefix-object}left
+  margin-right: $space-2
+  order: 1
+
+.{$prefix-object}body
+  flex: 1 1 auto
+  min-height: 0
+  min-width: 0
+  order: 2
