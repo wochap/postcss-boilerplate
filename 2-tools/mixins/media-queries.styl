@@ -1,5 +1,7 @@
 //  Media queries
 //  ==========================================================================
+//
+// source: https://github.com/escueladigital/ED-GRID/blob/master/componentes/_mixins.scss
 
 
 hasta($size)
@@ -9,6 +11,7 @@ hasta($size)
   else
     @media screen and (max-width: $size)
       {block}
+to = hasta
 
 desde($size)
   if $breakpoints[$size]
@@ -17,6 +20,7 @@ desde($size)
   else
     @media screen and (min-width: $size)
       {block}
+from = desde
 
 desde-hasta($desde, $hasta)
   if $breakpoints[$desde] && $breakpoints[$hasta]
@@ -31,3 +35,4 @@ desde-hasta($desde, $hasta)
   else
     @media screen and (min-width: $desde) and (max-width: $hasta)
       {block}
+from-to = desde-hasta
