@@ -6,10 +6,10 @@
 //
 // @require {function} _is-size
 
-size( values... )
-  if length( values ) == 1
-      width: values[ 0 ] || auto
-      height: values[ 0 ] || auto
+size($vals...)
+  if length( $vals ) == 1
+      width: $vals[ 0 ] || auto
+      height: $vals[ 0 ] || auto
   else
-    width: values[ 0 ] if values[ 0 ] != false
-    height: values[ 1 ] if values[ 1 ] != false
+    width: $vals[ 0 ] if $vals[ 0 ] != false
+    height: $vals[ 1 ] if $vals[ 1 ] != false
