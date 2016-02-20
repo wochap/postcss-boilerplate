@@ -14,15 +14,24 @@
 .{$prefix-utility}ml0 { margin-left:   0 }
 
 for $key, $value in $spaces
-  .{$prefix-utility}m{$key}  { margin:        space($key) }
-  .{$prefix-utility}mt{$key} { margin-top:    space($key) }
-  .{$prefix-utility}mr{$key} { margin-right:  space($key) }
-  .{$prefix-utility}mb{$key} { margin-bottom: space($key) }
-  .{$prefix-utility}ml{$key} { margin-left:   space($key) }
+  .{$prefix-utility}m{$key}  { margin:        $value }
+  .{$prefix-utility}mt{$key} { margin-top:    $value }
+  .{$prefix-utility}mr{$key} { margin-right:  $value }
+  .{$prefix-utility}mb{$key} { margin-bottom: $value }
+  .{$prefix-utility}ml{$key} { margin-left:   $value }
+
+  .{$prefix-utility}py{$key} {
+    margin-top:    $value;
+    margin-bottom: $value;
+  }
+  .{$prefix-utility}px{$key} {
+    margin-left:  $value;
+    margin-right: $value;
+  }
 
   .{$prefix-utility}mxn{$key} {
-    margin-left:  - space($key);
-    margin-right: - space($key);
+    margin-left:  $value * -1;
+    margin-right: $value * -1;
   }
 
 .{$prefix-utility}mx-auto {
@@ -41,17 +50,17 @@ for $key, $value in $spaces
 .{$prefix-utility}pl0 { padding-left:   0 }
 
 for $key, $value in $spaces
-  .{$prefix-utility}p{$key}  { padding:        space($key) }
-  .{$prefix-utility}pt{$key} { padding-top:    space($key) }
-  .{$prefix-utility}pr{$key} { padding-right:  space($key) }
-  .{$prefix-utility}pb{$key} { padding-bottom: space($key) }
-  .{$prefix-utility}pl{$key} { padding-left:   space($key) }
+  .{$prefix-utility}p{$key}  { padding:        $value }
+  .{$prefix-utility}pt{$key} { padding-top:    $value }
+  .{$prefix-utility}pr{$key} { padding-right:  $value }
+  .{$prefix-utility}pb{$key} { padding-bottom: $value }
+  .{$prefix-utility}pl{$key} { padding-left:   $value }
 
   .{$prefix-utility}py{$key} {
-    padding-top:    space($key);
-    padding-bottom: space($key);
+    padding-top:    $value;
+    padding-bottom: $value;
   }
   .{$prefix-utility}px{$key} {
-    padding-left:  space($key);
-    padding-right: space($key);
+    padding-left:  $value;
+    padding-right: $value;
   }
