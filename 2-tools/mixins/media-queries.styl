@@ -36,3 +36,27 @@ desde-hasta($desde, $hasta)
     @media screen and (min-width: $desde) and (max-width: $hasta)
       {block}
 from-to = desde-hasta
+
+
+//  Debug
+//  --------------------------------------------------------------------------
+
+media-queries-debug()
+  body
+    &::after
+    &::before
+      content: 'none'
+      font-size: 10rem
+      left: 50%
+      opacity: .25
+      pointer-events none
+      position: absolute
+      top: 50%
+      transform: translate3d(-50%, -50%, 0)
+      z-index: 9999
+
+    for $key, $value in $breakpoints
+      +desde($key)
+        &::after
+        &::before
+          content: $key

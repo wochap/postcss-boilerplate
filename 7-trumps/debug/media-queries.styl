@@ -5,22 +5,4 @@
 
 
 if $debug-media-queries
-  body
-    &::after
-    &::before
-      content: 'xs'
-      font-size: 10rem
-      left: 50%
-      opacity: .25
-      pointer-events none
-      position: absolute
-      top: 50%
-      transform: translate3d(-50%, -50%, 0)
-      z-index: 9999
-
-  for $key, $value in $breakpoints
-    +desde($key)
-      body
-        &::after
-        &::before
-          content: $key
+  media-queries-debug()
