@@ -39,28 +39,51 @@ scope($name)
 //  Element
 //  --------------------------------------------------------------------------
 
-element($names...)
-  for $name in $names
-    &{$bemit-element-separator + $name}
-      {block}
+_element()
+  $list = ''
+  $reference = '&'
+  if match('.', '&')
+    $reference = '& ' + '^[-1]'
+  for $name in arguments
+    $list = ($list + $reference + $bemit-element-separator + $name + '\n')
+  return $list
+
+element()
+  {_element(arguments)}
+    {block}
 
 
 //  Modifier
 //  --------------------------------------------------------------------------
 
-modifier($names...)
-  for $name in $names
-    &{$bemit-modifier-separator + $name}
-      {block}
+_modifier()
+  $list = ''
+  $reference = '&'
+  if match('.', '&')
+    $reference = '& ' + '^[-1]'
+  for $name in arguments
+    $list = ($list + $reference + $bemit-modifier-separator + $name + '\n')
+  return $list
+
+modifier()
+  {_modifier(arguments)}
+    {block}
 
 
 //  State
 //  --------------------------------------------------------------------------
 
-modifier($names...)
-  for $name in $names
-    &{'.' + $bemit-state-prefix + '-' + $name}
-      {block}
+
+_state()
+  $list = ''
+  $reference = '&'
+  for $name in arguments
+    $list = ($list + $reference + '.' + $bemit-state-prefix + '-' + $name + '\n')
+  return $list
+
+state()
+  {_state(arguments)}
+    {block}
 
 
 //  Suffix
