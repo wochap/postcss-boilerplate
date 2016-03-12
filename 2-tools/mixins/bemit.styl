@@ -42,15 +42,17 @@ scope($name)
 _element()
   $list = ''
   $reference = '&'
-  if match('.', '&')
+  if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&')) || match($bemit-suffix-prefix, selector('&'))
     $reference = '& ' + '^[-1]'
   for $name in arguments
     $list = ($list + $reference + $bemit-element-separator + $name + '\n')
   return $list
 
 element()
-  {_element(arguments)}
-    {block}
+  $arguments = arguments
+  $block = pop($arguments)
+  {_element($arguments)}
+    $block()
 
 
 //  Modifier
@@ -59,39 +61,47 @@ element()
 _modifier()
   $list = ''
   $reference = '&'
-  if match('.', '&')
+  if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-suffix-prefix, selector('&'))
     $reference = '& ' + '^[-1]'
   for $name in arguments
     $list = ($list + $reference + $bemit-modifier-separator + $name + '\n')
   return $list
 
 modifier()
-  {_modifier(arguments)}
-    {block}
+  $arguments = arguments
+  $block = pop($arguments)
+  {_modifier($arguments)}
+    $block()
 
 
 //  State
 //  --------------------------------------------------------------------------
 
-
 _state()
   $list = ''
   $reference = '&'
+  if match($bemit-modifier-separator, selector('&')) || match($bemit-suffix-prefix, selector('&'))
+    $reference = '& ' + '^[-1]'
   for $name in arguments
     $list = ($list + $reference + '.' + $bemit-state-prefix + '-' + $name + '\n')
   return $list
 
 state()
-  {_state(arguments)}
-    {block}
+  $arguments = arguments
+  $block = pop($arguments)
+  {_state($arguments)}
+    $block()
 
 
 //  Suffix
 //  --------------------------------------------------------------------------
 
-suffix($name)
-  &{$bemit-suffix-prefix + $name}
-    {block}
+suffix($name, $block)
+  $reference = '&'
+  if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&'))
+    $reference = '& ' + '^[-1]'
+  {$reference + $bemit-suffix-prefix + $name}
+    $block()
 
 
 //  Debug
