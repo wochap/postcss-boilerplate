@@ -1,65 +1,99 @@
 //  Bemit
 //  ==========================================================================
+//
+// source: https://github.com/danielguillan/bem-constructor
 
 
 //  Component
 //  --------------------------------------------------------------------------
 
 component($name)
-  {'.' + $prefix-component + $name}
+  {'.' + $bemit-component-prefix + '-' + $name}
     {block}
-c = component
 
 
 //  Object
 //  --------------------------------------------------------------------------
 
 object($name)
-  {'.' + $prefix-object + $name}
+  {'.' + $bemit-object-prefix + '-' + $name}
     {block}
-o = object
 
 
 //  Utility
 //  --------------------------------------------------------------------------
 
 utility($name)
-  {'.' + $prefix-utility + $name}
+  {'.' + $bemit-utility-prefix + '-' + $name}
     {block}
-u = utility
 
 
 //  Scope
 //  --------------------------------------------------------------------------
 
 scope($name)
-  {'.' + $prefix-scope + $name}
+  {'.' + $bemit-scope-prefix + '-' + $name}
     {block}
-s = scope
 
 
 //  Element
 //  --------------------------------------------------------------------------
 
-element($name)
-  &{$prefix-element + $name}
-    {block}
-e = element
+element($names...)
+  for $name in $names
+    &{$bemit-element-separator + $name}
+      {block}
 
 
 //  Modifier
 //  --------------------------------------------------------------------------
 
-modifier($name)
-  &{$prefix-modifier + $name}
-    {block}
-m = modifier
+modifier($names...)
+  for $name in $names
+    &{$bemit-modifier-separator + $name}
+      {block}
 
 
 //  State
 //  --------------------------------------------------------------------------
 
-when($name)
-  &{'.' + $prefix-state + $name}
+modifier($names...)
+  for $name in $names
+    &{'.' + $bemit-state-prefix + '-' + $name}
+      {block}
+
+
+//  Suffix
+//  --------------------------------------------------------------------------
+
+suffix($name)
+  &{$bemit-suffix-prefix + $name}
     {block}
-w = when
+
+
+//  Debug
+//  --------------------------------------------------------------------------
+
+bemit-debug()
+  // elements
+  [class*={'"' + $bemit-element-separator + '"'}]
+    outline: $bemit-debug-styles['elements']
+
+  // modifiers
+  [class*={'"' + $bemit-modifier-separator + '"'}]
+    outline: $bemit-debug-styles['modifiers']
+
+  // objects
+  [class^={'"' + $bemit-object-prefix + '"'}]
+  [class*={'" ' + $bemit-object-prefix + '"'}]
+    outline: $bemit-debug-styles['objects']
+
+  // components
+  [class^={'"' + $bemit-component-prefix + '"'}]
+  [class*={'" ' + $bemit-component-prefix + '"'}]
+    outline: $bemit-debug-styles['components']
+
+  // utilities
+  [class^={'"' + $bemit-utility-prefix + '"'}]
+  [class*={'" ' + $bemit-utility-prefix + '"'}]
+    outline: $bemit-debug-styles['utilities']
