@@ -1,7 +1,9 @@
 //  Bemit
 //  ==========================================================================
+//  require use brackets
 //
 // source: https://github.com/danielguillan/bem-constructor
+// block mixin bug: https://github.com/stylus/stylus/issues/1703#issuecomment-74345755
 
 
 //  Component
@@ -40,17 +42,22 @@ scope($name, $block)
 //  --------------------------------------------------------------------------
 
 _element()
-  $list = ''
+  $list = '' // selectors list
   $reference = '&'
+  $selector = '' // >
+  if typeof(last(arguments)) == 'boolean' &&  last(arguments) == true
+    _void = pop(arguments)
+    $selector = '> '
   if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&')) || match($bemit-suffix-prefix, selector('&'))
-    $reference = '& ' + '^[-1]'
+    // call inner state || modifier || suffix mixin
+    $reference = '& ' + $selector + '^[-1]'
   for $name in arguments
     $list = ($list + $reference + $bemit-element-separator + $name + '\n')
   return $list
 
 element()
-  $arguments = arguments
-  $block = pop($arguments)
+  $arguments = arguments // names
+  $block = pop($arguments) // anonymous function
   {_element($arguments)}
     $block()
 
@@ -98,8 +105,8 @@ state()
 
 suffix($name, $block)
   $reference = '&'
-  if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&'))
-    $reference = '& ' + '^[-1]'
+  // if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&'))
+  //   $reference = '& ' + '^[-1]'
   {$reference + $bemit-suffix-prefix + $name}
     $block()
 
