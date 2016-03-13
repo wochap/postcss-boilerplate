@@ -1,0 +1,22 @@
+{
+  "name": "stylus-base",
+  "version": "0.1.0",
+  "description": "A robust Stylus Base for web projects",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "stylus ./lib/stylus-base/main.styl --out ./dist/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wochap/stylus-base.git"
+  },
+  "author": "Gean Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wochap/stylus-base/issues"
+  },
+  "homepage": "https://github.com/wochap/stylus-base#readme"
+}
