@@ -25,8 +25,17 @@ object($name, $block)
 //  Utility
 //  --------------------------------------------------------------------------
 
-utility($name, $block)
-  {'.' + $bemit-utility-prefix + '-' + $name}
+_utility()
+  $list = ''
+  $reference = '.'
+  for $name in arguments
+    $list = ($list + $reference + $bemit-utility-prefix + '-' + $name + '\n')
+  return $list
+
+utility()
+  $arguments = arguments
+  $block = pop($arguments)
+  {_utility($arguments)}
     $block()
 
 
@@ -103,11 +112,19 @@ state()
 //  Suffix
 //  --------------------------------------------------------------------------
 
-suffix($name, $block)
+_suffix()
+  $list = ''
   $reference = '&'
   // if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&'))
   //   $reference = '& ' + '^[-1]'
-  {$reference + $bemit-suffix-prefix + $name}
+  for $name in arguments
+    $list = ($list + $reference + $bemit-suffix-prefix + $name + '\n')
+  return $list
+
+suffix()
+  $arguments = arguments
+  $block = pop($arguments)
+  {_suffix($arguments)}
     $block()
 
 
