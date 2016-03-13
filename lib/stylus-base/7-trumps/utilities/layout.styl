@@ -4,15 +4,26 @@
 //  doc: http://www.basscss.com/#basscss-layout
 
 
+//  Display
+//  --------------------------------------------------------------------------
+
 utility('inline', @(){ display: inline })
 utility('block', @(){ display: block })
 utility('inline-block', @(){ display: inline-block })
 utility('table', @(){ display: table })
 utility('table-cell', @(){ display: table-cell })
 
+
+//  Overflow
+//  --------------------------------------------------------------------------
+
 utility('overflow-hidden', @(){ overflow: hidden })
 utility('overflow-scroll', @(){ overflow: scroll })
 utility('overflow-auto', @(){ overflow: auto })
+
+
+//  Floats
+//  --------------------------------------------------------------------------
 
 utility('clearfix', @(){
   &::before
@@ -28,6 +39,14 @@ utility('clearfix', @(){
 utility('left', @(){ float: left })
 utility('right', @(){ float: right })
 
+
+//  Max Width
+//  --------------------------------------------------------------------------
+
 utility('fit', @(){ max-width: 100% })
+
+
+//  Box-Sizing Border-Box
+//  --------------------------------------------------------------------------
 
 utility('border-box', @(){ box-sizing: border-box })

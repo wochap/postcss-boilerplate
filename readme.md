@@ -90,8 +90,10 @@ $ npm test
   * Update base styles
   * Update Tools/mixins folder structure
   * Update repo folder structure
-  * Add bourbon mixins tests
+  * Add tests for bourbon mixins
+  * Add bemit mixins
   * Replace custom normalize by original normalize
+  * Update Basscss v8.0.1
 
 ### 0.0.9
 
