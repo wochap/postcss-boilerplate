@@ -7,33 +7,33 @@
 //  Component
 //  --------------------------------------------------------------------------
 
-component($name)
+component($name, $block)
   {'.' + $bemit-component-prefix + '-' + $name}
-    {block}
+    $block()
 
 
 //  Object
 //  --------------------------------------------------------------------------
 
-object($name)
+object($name, $block)
   {'.' + $bemit-object-prefix + '-' + $name}
-    {block}
+    $block()
 
 
 //  Utility
 //  --------------------------------------------------------------------------
 
-utility($name)
+utility($name, $block)
   {'.' + $bemit-utility-prefix + '-' + $name}
-    {block}
+    $block()
 
 
 //  Scope
 //  --------------------------------------------------------------------------
 
-scope($name)
+scope($name, $block)
   {'.' + $bemit-scope-prefix + '-' + $name}
-    {block}
+    $block()
 
 
 //  Element
