@@ -1,28 +1,33 @@
 //  Positions
 //  ==========================================================================
 //
-//  doc: http://www.basscss.com/docs/utility-layout/
+//  doc: http://www.basscss.com/#basscss-layout
 
-.{$prefix-utility}inline       { display: inline }
-.{$prefix-utility}block        { display: block }
-.{$prefix-utility}inline-block { display: inline-block }
-.{$prefix-utility}table        { display: table }
-.{$prefix-utility}table-cell   { display: table-cell }
 
-.{$prefix-utility}overflow-hidden { overflow: hidden }
-.{$prefix-utility}overflow-scroll { overflow: scroll }
-.{$prefix-utility}overflow-auto   { overflow: auto }
+utility('inline', @(){ display: inline })
+utility('block', @(){ display: block })
+utility('inline-block', @(){ display: inline-block })
+utility('table', @(){ display: table })
+utility('table-cell', @(){ display: table-cell })
 
-.{$prefix-utility}clearfix:before,
-.{$prefix-utility}clearfix:after {
-	content: " ";
-	display: table;
-}
-.{$prefix-utility}clearfix::after { clear: both }
+utility('overflow-hidden', @(){ overflow: hidden })
+utility('overflow-scroll', @(){ overflow: scroll })
+utility('overflow-auto', @(){ overflow: auto })
 
-.{$prefix-utility}left  { float: left }
-.{$prefix-utility}right { float: right }
+utility('clearfix', @(){
+  &::before
+  &::after {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    clear: both
+  }
+})
 
-.{$prefix-utility}fit { max-width: 100% }
+utility('left', @(){ float: left })
+utility('right', @(){ float: right })
 
-.{$prefix-utility}border-box { box-sizing: border-box }
+utility('fit', @(){ max-width: 100% })
+
+utility('border-box', @(){ box-sizing: border-box })

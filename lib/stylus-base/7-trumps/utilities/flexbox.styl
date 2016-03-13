@@ -7,59 +7,61 @@
 //  Parent Element Utilities
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}flex { display: flex }
+utility('flex', @(){
+  display: flex
 
-.{$prefix-utility}flex-column { flex-direction: column }
-.{$prefix-utility}flex-row    { flex-direction: row }
-.{$prefix-utility}flex-wrap   { flex-wrap: wrap }
+  for $key, $value in $breakpoints {
+    +desde($key) {
+      suffix($key, @(){
+        display: flex
+      })
+    }
+  }
+})
 
-.{$prefix-utility}items-baseline { align-items: baseline }
-.{$prefix-utility}items-center   { align-items: center }
-.{$prefix-utility}items-end      { align-items: flex-end }
-.{$prefix-utility}items-start    { align-items: flex-start }
-.{$prefix-utility}items-stretch  { align-items: stretch }
+utility('flex-column', @(){ flex-direction: column })
+utility('flex-row', @(){ flex-direction: row })
+utility('flex-wrap', @(){ flex-wrap: wrap })
 
-.{$prefix-utility}justify-around  { justify-content: space-around }
-.{$prefix-utility}justify-between { justify-content: space-between }
-.{$prefix-utility}justify-center  { justify-content: center }
-.{$prefix-utility}justify-end     { justify-content: flex-end }
-.{$prefix-utility}justify-start   { justify-content: flex-start }
+utility('items-baseline', @(){ align-items: baseline })
+utility('items-center', @(){ align-items: center })
+utility('items-end', @(){ align-items: flex-end })
+utility('items-start', @(){ align-items: flex-start })
+utility('items-stretch', @(){ align-items: stretch })
 
-.{$prefix-utility}content-around  { align-content: space-around }
-.{$prefix-utility}content-between { align-content: space-between }
-.{$prefix-utility}content-center  { align-content: center }
-.{$prefix-utility}content-end     { align-content: flex-end }
-.{$prefix-utility}content-start   { align-content: flex-start }
-.{$prefix-utility}content-stretch { align-content: stretch }
+utility('justify-around', @(){ justify-content: space-around })
+utility('justify-between', @(){ justify-content: space-between })
+utility('justify-center', @(){ justify-content: center })
+utility('justify-end', @(){ justify-content: flex-end })
+utility('justify-start', @(){ justify-content: flex-start })
+
+utility('content-around', @(){ align-content: space-around })
+utility('content-between', @(){ align-content: space-between })
+utility('content-center', @(){ align-content: center })
+utility('content-end', @(){ align-content: flex-end })
+utility('content-start', @(){ align-content: flex-start })
+utility('content-stretch', @(){ align-content: stretch })
 
 
 //  Child Element Utilities
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}align-self-baseline { align-self: baseline }
-.{$prefix-utility}align-self-center   { align-self: center }
-.{$prefix-utility}align-self-end      { align-self: flex-end }
-.{$prefix-utility}align-self-start    { align-self: flex-start }
-.{$prefix-utility}align-self-stretch  { align-self: stretch }
+utility('align-self-baseline', @(){ align-self: baseline })
+utility('align-self-center', @(){ align-self: center })
+utility('align-self-end', @(){ align-self: flex-end })
+utility('align-self-start', @(){ align-self: flex-start })
+utility('align-self-stretch', @(){ align-self: stretch })
 
-.{$prefix-utility}flex-auto {
+utility('flex-auto', @(){
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
-}
-.{$prefix-utility}flex-grow { flex: 1 0 auto }
-.{$prefix-utility}flex-none { flex: none }
+})
+utility('flex-grow', @(){ flex: 1 0 auto })
+utility('flex-none', @(){ flex: none })
 
-.{$prefix-utility}order-0 { order: 0 }
-.{$prefix-utility}order-1 { order: 1 }
-.{$prefix-utility}order-2 { order: 2 }
-.{$prefix-utility}order-3 { order: 3 }
-.{$prefix-utility}order-last { order: 99999 }
-
-
-//  Media queries
-//  --------------------------------------------------------------------------
-
-for $key, $value in $breakpoints
-  +desde($key)
-    .{$prefix-utility + 'flex\@' + $key} { display: flex }
+utility('order-0', @(){ order: 0 })
+utility('order-1', @(){ order: 1 })
+utility('order-2', @(){ order: 2 })
+utility('order-3', @(){ order: 3 })
+utility('order-last', @(){ order: 99999 })

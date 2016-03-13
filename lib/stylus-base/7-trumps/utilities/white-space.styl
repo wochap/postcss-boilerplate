@@ -7,60 +7,59 @@
 //  Margins
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}m0  { margin:        0 }
-.{$prefix-utility}mt0 { margin-top:    0 }
-.{$prefix-utility}mr0 { margin-right:  0 }
-.{$prefix-utility}mb0 { margin-bottom: 0 }
-.{$prefix-utility}ml0 { margin-left:   0 }
+utility('m0', @(){ margin: 0 })
+utility('mt0', @(){ margin-top: 0 })
+utility('mr0', @(){ margin-right: 0 })
+utility('mb0', @(){ margin-bottom: 0 })
+utility('ml0', @(){ margin-left: 0 })
 
-for $key, $value in $spaces
-  .{$prefix-utility}m{$key}  { margin:        $value }
-  .{$prefix-utility}mt{$key} { margin-top:    $value }
-  .{$prefix-utility}mr{$key} { margin-right:  $value }
-  .{$prefix-utility}mb{$key} { margin-bottom: $value }
-  .{$prefix-utility}ml{$key} { margin-left:   $value }
+for $space, $value in $spaces
+  utility('m' + $space, @(){ margin: $value })
+  utility('mt' + $space, @(){ margin-top: $value })
+  utility('mr' + $space, @(){ margin-right: $value })
+  utility('mb' + $space, @(){ margin-bottom: $value })
+  utility('ml' + $space, @(){ margin-left: $value })
 
-  .{$prefix-utility}py{$key} {
+  utility('py' + $space, @(){
     margin-top:    $value;
     margin-bottom: $value;
-  }
-  .{$prefix-utility}px{$key} {
+  })
+  utility('px' + $space, @(){
     margin-left:  $value;
     margin-right: $value;
-  }
-
-  .{$prefix-utility}mxn{$key} {
+  })
+  utility('mxn' + $space, @(){
     margin-left:  $value * -1;
     margin-right: $value * -1;
-  }
+  })
 
-.{$prefix-utility}mx-auto {
+utility('mx-auto', @(){
   margin-left: auto;
   margin-right: auto;
-}
+})
 
 
 //  Padding
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}p0  { padding:        0 }
-.{$prefix-utility}pt0 { padding-top:    0 }
-.{$prefix-utility}pr0 { padding-right:  0 }
-.{$prefix-utility}pb0 { padding-bottom: 0 }
-.{$prefix-utility}pl0 { padding-left:   0 }
+utility('p0', @(){ padding: 0 })
+utility('pt0', @(){ padding-top: 0 })
+utility('pr0', @(){ padding-right: 0 })
+utility('pb0', @(){ padding-bottom: 0 })
+utility('pl0', @(){ padding-left: 0 })
 
-for $key, $value in $spaces
-  .{$prefix-utility}p{$key}  { padding:        $value }
-  .{$prefix-utility}pt{$key} { padding-top:    $value }
-  .{$prefix-utility}pr{$key} { padding-right:  $value }
-  .{$prefix-utility}pb{$key} { padding-bottom: $value }
-  .{$prefix-utility}pl{$key} { padding-left:   $value }
+for $space, $value in $spaces
+  utility('p' + $space, @(){ padding: $value })
+  utility('pt' + $space, @(){ padding-top: $value })
+  utility('pr' + $space, @(){ padding-right: $value })
+  utility('pb' + $space, @(){ padding-bottom: $value })
+  utility('pl' + $space, @(){ padding-left: $value })
 
-  .{$prefix-utility}py{$key} {
+  utility('py' + $space, @(){
     padding-top:    $value;
     padding-bottom: $value;
-  }
-  .{$prefix-utility}px{$key} {
+  })
+  utility('px' + $space, @(){
     padding-left:  $value;
     padding-right: $value;
-  }
+  })

@@ -3,74 +3,74 @@
 //
 //   doc: http://www.basscss.com/#basscss-typography
 
-for $key, $value in $font-weights
-  .{$prefix-utility + $key} { font-weight: $value }
 
-.{$prefix-utility}italic  { font-style: italic }
+for $fw, $value in $font-weights {
+  utility($fw, @(){
+    font-weight: $value
+  })
+}
 
-.{$prefix-utility}capitalize { text-transform: capitalize }
-.{$prefix-utility}lowercase  { text-transform: lowercase }
-.{$prefix-utility}uppercase  { text-transform: uppercase }
+utility('italic', @(){ font-style: italic })
 
-.{$prefix-utility}left-align   { text-align: left }
-.{$prefix-utility}center       { text-align: center }
-.{$prefix-utility}right-align  { text-align: right }
-.{$prefix-utility}justify      { text-align: justify }
+utility('capitalize', @(){ text-transform: capitalize })
+utility('lowercase', @(){ text-transform: lowercase })
+utility('uppercase', @(){ text-transform: uppercase })
 
-.{$prefix-utility}nowrap { white-space: nowrap }
-.{$prefix-utility}break-word { word-wrap: break-word }
+utility('left-align', @(){ text-align: left })
+utility('center', @(){ text-align: center })
+utility('right-align', @(){ text-align: right })
+utility('justify', @(){ text-align: justify })
 
-.{$prefix-utility}font-familiy-inherit { font-family: inherit }
-.{$prefix-utility}text-decoration-none { text-decoration: none }
+utility('nowrap', @(){ white-space: nowrap })
+utility('break-word', @(){ word-wrap: break-word })
 
-.{$prefix-utility}truncate {
+utility('font-familiy-inherit', @(){ font-family: inherit })
+utility('text-decoration-none', @(){ text-decoration: none })
+
+utility('truncate', @(){
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+})
 
-.{$prefix-utility}list-reset {
+utility('list-reset', @(){
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
-}
+})
 
 
 //  Headings
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}h00,
-.{$prefix-utility}h0,
-.{$prefix-utility}h1,
-.{$prefix-utility}h2,
-.{$prefix-utility}h3,
-.{$prefix-utility}h4,
-.{$prefix-utility}h5,
-.{$prefix-utility}h6 {
+utility('h6', 'h5', 'h4', 'h3', 'h2', 'h1', 'h0', 'h00', @(){
   color: $heading-color
   display block
   font-family: $heading-font-family
   font-weight: $heading-font-weight
   line-height: $heading-line-height
   margin: 0 0 1em
-}
+})
 
-.{$prefix-utility}h00 { font-size: $fz-h00 }
-.{$prefix-utility}h0  { font-size: $fz-h0 }
-.{$prefix-utility}h1  { font-size: $fz-h1 }
-.{$prefix-utility}h2  { font-size: $fz-h2 }
-.{$prefix-utility}h3  { font-size: $fz-h3 }
-.{$prefix-utility}h4  { font-size: $fz-h4 }
-.{$prefix-utility}h5  { font-size: $fz-h5 }
-.{$prefix-utility}h6  { font-size: $fz-h6 }
+utility('h00', @(){ font-size: $fz-h00 })
+utility('h0', @(){ font-size: $fz-h0 })
+utility('h1', @(){ font-size: $fz-h1 })
+utility('h2', @(){ font-size: $fz-h2 })
+utility('h3', @(){ font-size: $fz-h3 })
+utility('h4', @(){ font-size: $fz-h4 })
+utility('h5', @(){ font-size: $fz-h5 })
+utility('h6', @(){ font-size: $fz-h6 })
 
 
 //  Font sizes
 //  --------------------------------------------------------------------------
 
-.{$prefix-utility}fz-inherit { font-size: inherit }
+utility('fz-inherit', @(){ font-size: inherit })
 
-for $key, $value in $font-sizes
-  .{$prefix-utility + 'fz-' + $key} { font-size: $value }
+for $fz, $value in $font-sizes {
+  utility('fz-' + $fz, @(){
+    font-size: $value
+  })
+}
