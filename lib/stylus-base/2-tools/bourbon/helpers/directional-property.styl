@@ -56,15 +56,6 @@ directional-property($pre, $suf, $vals)
   $vals = collapse-directionals($vals)
 
   if contains-falsy($vals)
-    if $vals[0] != false
-      {$top}: $vals[0] unquote($important)
-
-    if length( $vals ) == 1
-      if $vals[0] != false
-        {$right}: $vals[0] unquote($important)
-    else
-      if $vals[1] != false
-        {$right}: $vals[1] unquote($important)
 
     if length($vals) == 2
       if $vals[0] != false
@@ -81,6 +72,16 @@ directional-property($pre, $suf, $vals)
         {$bottom}: $vals[2] unquote($important)
       if $vals[3] != false
         {$left}:   $vals[3] unquote($important)
+
+    if length( $vals ) == 1
+      if $vals[0] != false
+        {$right}: $vals[0] unquote($important)
+    else
+      if $vals[1] != false
+        {$right}: $vals[1] unquote($important)
+
+    if $vals[0] != false
+      {$top}: $vals[0] unquote($important)
 
   else
     {$all}: $vals unquote( $important )
