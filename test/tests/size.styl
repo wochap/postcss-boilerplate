@@ -1,0 +1,31 @@
+// @describe bourbon size() mixin
+
+// @it output width and height 0
+.element
+  size(0)
+
+// @expect
+.element {
+  height: 0;
+  width: 0;
+}
+
+// @it output width and height 100px
+.element
+  size(100px)
+
+// @expect
+.element {
+  height: 100px;
+  width: 100px;
+}
+
+// @it output width and height auto
+.element
+  size(auto)
+
+// @expect
+.element {
+  height: auto;
+  width: auto;
+}

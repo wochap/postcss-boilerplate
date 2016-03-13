@@ -1,0 +1,59 @@
+// @describe bourbon padding() mixin
+
+// @it output padding: 0
+.element
+  padding(0)
+
+// @expect
+.element {
+  padding: 0;
+}
+
+// @it output padding: 0 1rem
+.element
+  padding(0 1rem)
+
+// @expect
+.element {
+  padding: 0 1rem;
+}
+
+// @it output padding: 1rem 0
+.element
+  padding(1rem 0)
+
+// @expect
+.element {
+  padding: 1rem 0;
+}
+
+// @it output padding-x 0
+.element
+  padding(false 0)
+
+// @expect
+.element {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// @it output padding-y 1rem
+.element
+  padding(1rem false)
+
+// @expect
+.element {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+// @it output padding-left: 2rem, padding-right: 0, padding-top: 1rem
+.element
+  padding(1rem 0 false 2rem)
+
+// @expect
+.element {
+  padding-left: 2rem;
+  padding-right: 0;
+  padding-top: 1rem;
+}

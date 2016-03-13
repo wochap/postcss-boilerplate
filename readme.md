@@ -70,6 +70,16 @@ For each new project I set up I keep finding myself creating the same directory 
     * Only affect one piece of the DOM at a time.
     * Usually carry !important.
 
+## Running Tests
+
+*** Note: Note: stylus-test-runner has outdated stylus dependencie ***
+
+All bourbon mixins have test coverage to ensure everything works as expected. To run the tests, clone this repo and run:
+
+```sh
+$ npm test
+```
+
 ## [Docs](https://github.com/wochap/stylus-base/blob/master/docs.md)
 
 ## Changelog
@@ -79,6 +89,9 @@ For each new project I set up I keep finding myself creating the same directory 
   * Update utilities Basscss
   * Update base styles
   * Update Tools/mixins folder structure
+  * Update repo folder structure
+  * Add bourbon mixins tests
+  * Replace custom normalize by original normalize
 
 ### 0.0.9
 

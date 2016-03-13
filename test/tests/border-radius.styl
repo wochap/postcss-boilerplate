@@ -1,0 +1,41 @@
+// @describe bourbon border-radius() mixin
+
+// @it output border left radius 2em
+.element
+  border-left-radius(2em)
+
+// @expect
+.element {
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 2em;
+}
+
+// @it output border right radius 2em
+.element
+  border-right-radius(2em)
+
+// @expect
+.element {
+  border-bottom-right-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+// @it output border top radius 2em
+.element
+  border-top-radius(2em)
+
+// @expect
+.element {
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+// @it output border bottom radius 2em
+.element
+  border-bottom-radius(2em)
+
+// @expect
+.element {
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}

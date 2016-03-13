@@ -1,0 +1,59 @@
+// @describe bourbon margin() mixin
+
+// @it output margin: 0
+.element
+  margin(0)
+
+// @expect
+.element {
+  margin: 0;
+}
+
+// @it output margin: 0 1rem
+.element
+  margin(0 1rem)
+
+// @expect
+.element {
+  margin: 0 1rem;
+}
+
+// @it output margin: 1rem 0
+.element
+  margin(1rem 0)
+
+// @expect
+.element {
+  margin: 1rem 0;
+}
+
+// @it output margin-x 0
+.element
+  margin(false 0)
+
+// @expect
+.element {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// @it output margin-y 1rem
+.element
+  margin(1rem false)
+
+// @expect
+.element {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+// @it output margin-left: 2rem, margin-right: 0, margin-top: 1rem
+.element
+  margin(1rem 0 false 2rem)
+
+// @expect
+.element {
+  margin-left: 2rem;
+  margin-right: 0;
+  margin-top: 1rem;
+}

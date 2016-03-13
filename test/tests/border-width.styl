@@ -1,0 +1,22 @@
+// @describe bourbon border-width() mixin
+
+// @it output border bottom, right, top width
+.element
+  border-width(0 2px 1rem false)
+
+// @expect
+.element {
+  border-bottom-width: 1rem;
+  border-right-width: 2px;
+  border-top-width: 0;
+}
+
+// @it output border bottom, top width
+.element
+  border-width(0 false 1rem false)
+
+// @expect
+.element {
+  border-bottom-width: 1rem;
+  border-top-width: 0;
+}
