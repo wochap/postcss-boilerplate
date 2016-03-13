@@ -20,7 +20,7 @@
   <body>
     <div class="u-wrap">
       <header class="welcome-message" role="banner">
-        <div class="container">
+        <div class="">
           <h1>
             Hey there! Thanks for contributing to
             <a href="https://github.com/wochap/stylus-base">Stylus Base</a>.
@@ -34,8 +34,8 @@
       <main role="main">
         <h2>Typography</h2>
         <h3>Headings</h3>
-        <span class="u-h00">Heading 00 <small>small u-h00</small></span>
-        <span class="u-h0">Heading 0 <small>small u-h0</small></span>
+        <span class="u-h00 u-block">Heading 00 <small>small u-h00</small></span>
+        <span class="u-h0 u-block">Heading 0 <small>small u-h0</small></span>
         <h1>Heading 1 <small>small h1</small></h1>
         <h2>Heading 2 <small>small h2</small></h2>
         <h3>Heading 3 <small>small h3</small></h3>
@@ -223,6 +223,37 @@
             </tr>
           </tbody>
         </table>
+        <h2>Cols object</h2>
+        <div class="o-cols">
+          <div class="o-cols__col">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">auto</div>
+          </div>
+          <div class="o-cols__col">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">auto</div>
+          </div>
+          <div class="o-cols__col">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">auto</div>
+          </div>
+        </div>
+        <div class="o-cols">
+          <div class="o-cols__col o-cols__col--8">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">8</div>
+          </div>
+          <div class="o-cols__col o-cols__col--4">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">4</div>
+          </div>
+        </div>
+        <div class="o-cols">
+          <div class="o-cols__col o-cols__col--12 o-cols__col--3@lg">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">3</div>
+          </div>
+          <div class="o-cols__col o-cols__col--12 o-cols__col--4@lg">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">4</div>
+          </div>
+          <div class="o-cols__col o-cols__col--12 o-cols__col--5@lg">
+            <div class="u-bg-purple u-py4 u-center u-fz-h2 u-white u-bold u-uppercase">5</div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
