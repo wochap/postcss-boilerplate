@@ -9,9 +9,10 @@
 //  Variables
 //  --------------------------------------------------------------------------
 
-$cols-gutter   = 16px
+$cols-gutter   = 1rem
 $cols-debug-bg = #FC6E51
 $cols-number   = 12
+
 
 //  Mixins
 //  --------------------------------------------------------------------------
@@ -27,19 +28,18 @@ make-col($col = false, $printAll = true)
     width: ($col / $cols-number) * 100%
 
 cols-debug()
-  position relative
+  & > *
+    position relative
 
-  &::after
-    background: rgba($cols-debug-bg, 0.25)
-    bottom: 0
-    height: 100%
-    left: 0
-    position: absolute
-    right: 0
-    top: 0
-    transition: opacity 1s ease-out
-    width: 100%
-    z-index: -1
+    &::after
+      background: rgba($cols-debug-bg, 0.25)
+      content: ''
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+      width: 100%
+      z-index: -1
 
 
 //  Grid
@@ -50,22 +50,19 @@ object('cols', @(){
   display: flex
   flex-direction: row
   flex-wrap wrap
-  margin-left: ($cols-gutter / -2)
-  margin-right: ($cols-gutter / -2)
+  margin: ($cols-gutter / -2)
   width: auto
-  if $debug-cols-object {
-    cols-debug()
-  }
 
   & + & {
-    margin-top: $cols-gutter
+    margin-top: ($cols-gutter / 2)
+  }
+
+  & + .o-cols--gapless {
+    margin-top: 1rem
   }
 
   element('col', true, @(){
     make-col()
-    if $debug-cols-object {
-      cols-debug()
-    }
 
     for $col in (1..$cols-number) {
       modifier($col, @(){
@@ -87,12 +84,11 @@ object('cols', @(){
   })
 
   modifier('gapless', @(){
-    margin-left: 0
-    margin-right: 0
+    margin: 0
 
-    // & + & {
-    //   margin-top: 0
-    // }
+    & + & {
+      margin-top: 0
+    }
 
     element('col', true, @(){
       padding: 0
