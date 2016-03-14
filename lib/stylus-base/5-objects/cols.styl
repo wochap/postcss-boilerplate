@@ -58,7 +58,7 @@ object('cols', @(){
   }
 
   & + & {
-    margin-bottom: $cols-gutter
+    margin-top: $cols-gutter
   }
 
   element('col', true, @(){
@@ -90,9 +90,9 @@ object('cols', @(){
     margin-left: 0
     margin-right: 0
 
-    & + & {
-      margin-bottom: 0
-    }
+    // & + & {
+    //   margin-top: 0
+    // }
 
     element('col', true, @(){
       padding: 0
