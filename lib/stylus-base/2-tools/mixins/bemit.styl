@@ -141,16 +141,16 @@ bemit-debug()
     outline: $bemit-debug-styles['modifiers']
 
   // objects
-  [class^={'"' + $bemit-object-prefix + '"'}]
+  [class^={'"' + $bemit-object-prefix + '-"'}]
   [class*={'" ' + $bemit-object-prefix + '"'}]
     outline: $bemit-debug-styles['objects']
 
   // components
-  [class^={'"' + $bemit-component-prefix + '"'}]
+  [class^={'"' + $bemit-component-prefix + '-"'}]
   [class*={'" ' + $bemit-component-prefix + '"'}]
     outline: $bemit-debug-styles['components']
 
   // utilities
-  [class^={'"' + $bemit-utility-prefix + '"'}]
+  [class^={'"' + $bemit-utility-prefix + '-"'}]
   [class*={'" ' + $bemit-utility-prefix + '"'}]
     outline: $bemit-debug-styles['utilities']
