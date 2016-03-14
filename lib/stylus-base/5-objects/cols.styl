@@ -70,6 +70,11 @@ object('cols', @(){
     for $col in (1..$cols-number) {
       modifier($col, @(){
         make-col($col, false)
+      })
+    }
+
+    for $col in (1..$cols-number) {
+      modifier($col, @(){
         for $size, $value in $breakpoints {
           +desde($size) {
             suffix($size, @(){
@@ -96,6 +101,7 @@ object('cols', @(){
 })
 
 /*
+TO DO
 half // 50%
 third // 33.3333%
 quarter // 25%
