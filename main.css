@@ -377,44 +377,20 @@ blockquote {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -8px;
-  margin-right: -8px;
+  margin: -0.5rem;
   width: auto;
-  position: relative;
-}
-.o-cols::after {
-  background: rgba(252,110,81,0.25);
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity 1s ease-out;
-  width: 100%;
-  z-index: -1;
 }
 .o-cols + .o-cols {
-  margin-bottom: 16px;
+  margin-top: 0.5rem;
+}
+.o-cols + .o-cols--gapless {
+  margin-top: 1rem;
 }
 .o-cols__col {
   flex: 1 1 0;
   min-height: 0;
   min-width: 0;
-  padding: 8px;
-  position: relative;
-}
-.o-cols__col::after {
-  background: rgba(252,110,81,0.25);
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity 1s ease-out;
-  width: 100%;
-  z-index: -1;
+  padding: 0.5rem;
 }
 .o-cols__col--1 {
   flex: none;
@@ -825,11 +801,10 @@ blockquote {
   }
 }
 .o-cols--gapless {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 }
 .o-cols--gapless + .o-cols--gapless {
-  margin-bottom: 0;
+  margin-top: 0;
 }
 .o-cols--gapless > .o-cols__col {
   padding: 0;
@@ -906,23 +881,20 @@ blockquote {
   border-color: #d8d8d8;
   cursor: not-allowed;
 }
-[class*="__"] {
-  outline: 5px solid #111;
+.o-cols > *,
+.o-cols__col > * {
+  position: relative;
 }
-[class*="--"] {
-  outline: 5px solid #aaa;
-}
-[class^="o-"],
-[class*=" o"] {
-  outline: 5px solid #ffdc00;
-}
-[class^="c-"],
-[class*=" c"] {
-  outline: 5px solid #ff851b;
-}
-[class^="u-"],
-[class*=" u"] {
-  outline: 5px solid #0074d9;
+.o-cols > *::after,
+.o-cols__col > *::after {
+  background: rgba(252,110,81,0.25);
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 body::after,
 body::before {
@@ -931,7 +903,7 @@ body::before {
   left: 50%;
   opacity: 0.25;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   z-index: 9999;
