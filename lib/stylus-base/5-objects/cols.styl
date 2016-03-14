@@ -58,7 +58,7 @@ object('cols', @(){
   }
 
   & + .o-cols--gapless {
-    margin-top: 1rem
+    margin-top: $cols-gutter
   }
 
   element('col', true, @(){
@@ -70,16 +70,16 @@ object('cols', @(){
       })
     }
 
-    for $col in (1..$cols-number) {
-      modifier($col, @(){
-        for $size, $value in $breakpoints {
-          +desde($size) {
-            suffix($size, @(){
-              make-col($col, false)
-            })
-          }
+    for $size, $value in $breakpoints {
+      +desde($size) {
+        for $col in (1..$cols-number) {
+          modifier($col, @(){
+              suffix($size, @(){
+                make-col($col, false)
+              })
+          })
         }
-      })
+      }
     }
   })
 
@@ -92,6 +92,22 @@ object('cols', @(){
 
     element('col', true, @(){
       padding: 0
+    })
+  })
+
+  modifier('gapminor', @(){
+    margin: (($cols-gutter / 2) / -2)
+
+    & + & {
+      margin-top: (($cols-gutter / 2) / 2)
+    }
+
+    & + .o-cols {
+      margin-top: (($cols-gutter / 2) / 2)
+    }
+
+    element('col', true, @(){
+      padding: (($cols-gutter / 2) / 2)
     })
   })
 })

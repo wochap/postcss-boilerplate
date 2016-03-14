@@ -57,6 +57,7 @@ _element()
   if typeof(last(arguments)) == 'boolean' &&  last(arguments) == true
     _void = pop(arguments)
     $selector = '> '
+    $reference = '& ' + $selector + '&'
   if match('.' + $bemit-state-prefix + '-', selector('&')) || match($bemit-modifier-separator, selector('&')) || match($bemit-suffix-prefix, selector('&'))
     // call inner state || modifier || suffix mixin
     $reference = '& ' + $selector + '^[-1]'
