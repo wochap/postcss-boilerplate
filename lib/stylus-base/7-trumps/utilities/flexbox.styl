@@ -7,6 +7,18 @@
 //  Parent Element Utilities
 //  --------------------------------------------------------------------------
 
+utility('inline-flex', @(){
+  display: inline-flex
+
+  for $key, $value in $breakpoints {
+    +desde($key) {
+      suffix($key, @(){
+        display: inline-flex
+      })
+    }
+  }
+})
+
 utility('flex', @(){
   display: flex
 
