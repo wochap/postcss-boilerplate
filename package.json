@@ -7,7 +7,8 @@
   },
   "scripts": {
     "test": "node test/test-runner.js",
-    "build": "stylus ./lib/stylus-base/main.styl --out ./dist/main.css"
+    "build": "stylus ./lib/stylus-base/main.styl --out ./dist/main.css",
+    "dev": "stylus --watch ./lib/stylus-base/main.styl --out ./dist/main.css"
   },
   "repository": {
     "type": "git",
