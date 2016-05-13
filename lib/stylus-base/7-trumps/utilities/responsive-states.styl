@@ -7,15 +7,12 @@
 //  Show
 //  --------------------------------------------------------------------------
 
-utility('show', @(){
-  suffix('xs', 'sm', 'md', 'lg', 'xl', @(){
-    display: none !important
-  })
 
+utility('show', @(){
   for $key, $value in $breakpoints {
-    +desde($key) {
+    +hasta($key) {
       suffix($key, @(){
-        display: block !important
+        display: none !important
       })
     }
   }
