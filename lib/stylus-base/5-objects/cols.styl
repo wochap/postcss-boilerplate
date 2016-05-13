@@ -95,6 +95,22 @@ object('cols', @(){
     })
   })
 
+  modifier('gapless-y', @(){
+    margin: 0 (($cols-gutter) / -2)
+
+    & + & {
+      margin-top: 0
+    }
+
+    & + .o-cols {
+      margin-top: 0
+    }
+
+    element('col', true, @(){
+      padding: 0 (($cols-gutter) / 2)
+    })
+  })
+
   modifier('gapminor', @(){
     margin: (($cols-gutter / 2) / -2)
 
@@ -108,6 +124,22 @@ object('cols', @(){
 
     element('col', true, @(){
       padding: (($cols-gutter / 2) / 2)
+    })
+  })
+
+  modifier('gapmajor', @(){
+    margin: (($cols-gutter * 2) / -2)
+
+    & + & {
+      margin-top: (($cols-gutter * 2) / 2)
+    }
+
+    & + .o-cols {
+      margin-top: (($cols-gutter * 2) / 2)
+    }
+
+    element('col', true, @(){
+      padding: (($cols-gutter * 2) / 2)
     })
   })
 })
