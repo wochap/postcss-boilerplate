@@ -1,3 +1,7 @@
+>## This Project Is Deprecated
+
+>I had problems with webpack hmr setup, mixin selectors [bug](https://github.com/stylus/stylus/issues/1703), now i'm working in [wocss](https://github.com/wocss/starter-kit) (personal need).
+
 ## Stylus Base
 
 > v.0.1.0
